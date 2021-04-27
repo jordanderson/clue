@@ -4405,7 +4405,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*98;
+Constant REQUISITION_STACK_SIZE = 3*100;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -10635,20 +10635,20 @@ Constant IK6_First = I135_wooden_side_table;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
-Constant IK10_First = I194_colonel_mustard;
-Constant IK11_First = I197_miss_scarlet;
+Constant IK10_First = I196_colonel_mustard;
+Constant IK11_First = I199_miss_scarlet;
 Constant IK12_First = nothing;
 Constant IK13_First = nothing;
 Constant IK14_First = nothing;
 Constant IK15_First = nothing;
 Constant IK16_First = I133_queen_anne_armchair;
-Constant IK17_First = I207_dull_silver_candlestick;
-Constant IK18_First = I209_pocket_knife;
-Constant IK19_First = I217_lead_pipe;
-Constant IK20_First = I215_lugwrench;
-Constant IK21_First = I211_small_pistol;
-Constant IK22_First = I213_thin_rope;
-Constant IK23_First = I207_dull_silver_candlestick;
+Constant IK17_First = I209_dull_silver_candlestick;
+Constant IK18_First = I211_pocket_knife;
+Constant IK19_First = I219_lead_pipe;
+Constant IK20_First = I217_lugwrench;
+Constant IK21_First = I213_small_pistol;
+Constant IK22_First = I215_thin_rope;
+Constant IK23_First = I209_dull_silver_candlestick;
 Constant No_Directions = 12;
 ! Table of direction object alias constants:
 Constant DirectionObject_0 = I51_north;
@@ -10666,14 +10666,14 @@ Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
  0 0 0 I127_hall 0 0 0 0 0 0 0 0 ! Exits from: I126_entryway
  I126_entryway I129_lounge I128_study I130_ballroom I132_dining_room I131_library I129_lounge I128_study 0 0 0 0 ! Exits from: I127_hall
- 0 0 0 I131_library I127_hall 0 I127_hall 0 I167_kitchen I167_kitchen 0 0 ! Exits from: I128_study
- 0 0 0 I132_dining_room 0 I127_hall 0 I127_hall I174_conservatory I174_conservatory 0 0 ! Exits from: I129_lounge
- I127_hall I132_dining_room I157_billiard_room 0 I167_kitchen I174_conservatory I167_kitchen I157_billiard_room 0 0 0 0 ! Exits from: I130_ballroom
- I128_study I127_hall 0 I157_billiard_room 0 0 I127_hall 0 0 0 0 0 ! Exits from: I131_library
- I129_lounge 0 I127_hall I167_kitchen 0 I130_ballroom 0 0 0 0 0 0 ! Exits from: I132_dining_room
- I131_library 0 0 I174_conservatory I130_ballroom 0 I130_ballroom 0 0 0 0 0 ! Exits from: I157_billiard_room
- I132_dining_room 0 I130_ballroom 0 0 0 0 I130_ballroom I128_study I128_study 0 0 ! Exits from: I167_kitchen
- I157_billiard_room I130_ballroom 0 0 0 0 I130_ballroom 0 I129_lounge I129_lounge 0 0 ! Exits from: I174_conservatory
+ 0 0 0 I131_library I127_hall 0 I127_hall 0 I169_kitchen I169_kitchen 0 0 ! Exits from: I128_study
+ 0 0 0 I132_dining_room 0 I127_hall 0 I127_hall I176_conservatory I176_conservatory 0 0 ! Exits from: I129_lounge
+ I127_hall I132_dining_room I158_billiard_room 0 I169_kitchen I176_conservatory I169_kitchen I158_billiard_room 0 0 0 0 ! Exits from: I130_ballroom
+ I128_study I127_hall 0 I158_billiard_room 0 0 I127_hall 0 0 0 0 0 ! Exits from: I131_library
+ I129_lounge 0 I127_hall I169_kitchen 0 I130_ballroom 0 0 0 0 0 0 ! Exits from: I132_dining_room
+ I131_library 0 0 I176_conservatory I130_ballroom 0 I130_ballroom 0 0 0 0 0 ! Exits from: I158_billiard_room
+ I132_dining_room 0 I130_ballroom 0 0 0 0 I130_ballroom I128_study I128_study 0 0 ! Exits from: I169_kitchen
+ I158_billiard_room I130_ballroom 0 0 0 0 I130_ballroom 0 I129_lounge I129_lounge 0 0 ! Exits from: I176_conservatory
 ;
 
 Class VPH_Class;
@@ -10710,7 +10710,7 @@ Class K1_room
     has ~privately_named
     has light
     has ~visited
-    has ~p59_suspect_room
+    has p59_suspect_room
     with list_together BC_9
     with short_name BC_10
     with plural BC_11
@@ -11210,7 +11210,7 @@ Object selfobj ""
     with IK2_Count 0
     with IK2_Link I133_queen_anne_armchair
     with IK8_Count 0
-    with IK8_Link I194_colonel_mustard
+    with IK8_Link I196_colonel_mustard
     with KD_Count 8
     with parse_name Parse_Name_GV13
     with action_bitmap 0 0 0 0 0 0 
@@ -11224,6 +11224,7 @@ Object I126_entryway ""
     class K1_room
     with short_name BC_196
     with description BC_197
+    has ~p59_suspect_room
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11240,7 +11241,6 @@ Object I127_hall ""
     class K1_room
     with short_name BC_201
     with description BC_202
-    has p59_suspect_room
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11442,7 +11442,6 @@ Object I128_study ""
     class K1_room
     with short_name BC_262
     with description BC_263
-    has p59_suspect_room
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11465,7 +11464,7 @@ Object -> I142_ornate_armchair ""
     with IK2_Count 10
     with IK2_Link I143_lavish_desk
     with IK16_Count 2
-    with IK16_Link I145_rich_green_carpet
+    with IK16_Link I146_rich_green_carpet
     with KD_Count 16
     with name 'ornate' 'armchair' 'coverers//p' 'chair' 
     with parse_name Parse_Name_GV93
@@ -11487,7 +11486,7 @@ Object -> I143_lavish_desk ""
     with IK2_Count 11
     with IK2_Link I144_fireplace
     with IK6_Count 2
-    with IK6_Link I148_blond_wood_table
+    with IK6_Link I145_marble_mantlepiece
     with KD_Count 6
     with name 'lavish' 'desk' 'supporters//p' 
     with action_bitmap 0 0 0 0 0 0 
@@ -11506,9 +11505,9 @@ Object -> I144_fireplace ""
     with vector 0
     has mark_as_thing
     with IK2_Count 12
-    with IK2_Link I145_rich_green_carpet
+    with IK2_Link I145_marble_mantlepiece
     with IK5_Count 1
-    with IK5_Link I184_curio_cabinet
+    with IK5_Link I186_curio_cabinet
     with KD_Count 5
     with name 'fireplace' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
@@ -11519,19 +11518,20 @@ Object -> I144_fireplace ""
     with article BC_284
 ;
 
-Object -> I145_rich_green_carpet ""
-    class K16_coverer
+Object -> I145_marble_mantlepiece ""
+    class K6_supporter
     with short_name BC_285
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 13
-    with IK2_Link I146_book_shelves
-    with IK16_Count 3
-    with IK16_Link I149_oak_armchair
-    with KD_Count 16
-    with name 'rich' 'green' 'carpet' 'coverers//p' 
+    with IK2_Link I146_rich_green_carpet
+    with IK6_Count 3
+    with IK6_Link I149_blond_wood_table
+    with KD_Count 6
+    with name 'marble' 'mantlepiece' 'supporters//p' 'mantle' 
+    with parse_name Parse_Name_GV94
     with action_bitmap 0 0 0 0 0 0 
     with description BC_286
     with initial BC_287
@@ -11540,53 +11540,73 @@ Object -> I145_rich_green_carpet ""
     with article BC_290
 ;
 
-Object -> I146_book_shelves ""
-    class K2_thing
+Object -> I146_rich_green_carpet ""
+    class K16_coverer
     with short_name BC_291
+    has static
+    has scenery
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 14
+    with IK2_Link I147_book_shelves
+    with IK16_Count 3
+    with IK16_Link I150_oak_armchair
+    with KD_Count 16
+    with name 'rich' 'green' 'carpet' 'coverers//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_292
+    with initial BC_293
+    with list_together BC_294
+    with plural BC_295
+    with article BC_296
+;
+
+Object -> I147_book_shelves ""
+    class K2_thing
+    with short_name BC_297
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_292
+    with cap_short_name BC_298
     has mark_as_thing
-    with IK2_Count 14
-    with IK2_Link I147_paintings
+    with IK2_Count 15
+    with IK2_Link I148_paintings
     with KD_Count 2
     with name 'book' 'shelves' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_293
-    with initial BC_294
-    with list_together BC_295
-    with plural BC_296
-    with article BC_297
+    with description BC_299
+    with initial BC_300
+    with list_together BC_301
+    with plural BC_302
+    with article BC_303
 ;
 
-Object -> I147_paintings ""
+Object -> I148_paintings ""
     class K2_thing
-    with short_name BC_298
+    with short_name BC_304
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_299
+    with cap_short_name BC_305
     has mark_as_thing
-    with IK2_Count 15
-    with IK2_Link I148_blond_wood_table
+    with IK2_Count 16
+    with IK2_Link I149_blond_wood_table
     with KD_Count 2
     with name 'paintings' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_300
-    with initial BC_301
-    with list_together BC_302
-    with plural BC_303
-    with article BC_304
+    with description BC_306
+    with initial BC_307
+    with list_together BC_308
+    with plural BC_309
+    with article BC_310
 ;
 
 Object I129_lounge ""
     class K1_room
-    with short_name BC_305
-    with description BC_306
-    has p59_suspect_room
+    with short_name BC_311
+    with description BC_312
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11594,45 +11614,24 @@ Object I129_lounge ""
     with IK1_Link I130_ballroom
     with KD_Count 1
     with name 'lounge' 'rooms//p' 
-    with list_together BC_307
-    with plural BC_308
-    with article BC_309
-;
-
-Object -> I148_blond_wood_table ""
-    class K6_supporter
-    with short_name BC_310
-    has static
-    has scenery
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 16
-    with IK2_Link I149_oak_armchair
-    with IK6_Count 3
-    with IK6_Link I158_bookcases
-    with KD_Count 6
-    with name 'blond' 'wood' 'table' 'supporters//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_311
-    with initial BC_312
     with list_together BC_313
     with plural BC_314
     with article BC_315
 ;
 
-Object -> I149_oak_armchair ""
-    class K16_coverer
+Object -> I149_blond_wood_table ""
+    class K6_supporter
     with short_name BC_316
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 17
-    with IK2_Link I150_comfortable_sofa
-    with IK16_Count 4
-    with IK16_Link I150_comfortable_sofa
-    with KD_Count 16
-    with name 'oak' 'armchair' 'coverers//p' 
+    with IK2_Link I150_oak_armchair
+    with IK6_Count 4
+    with IK6_Link I159_bookcases
+    with KD_Count 6
+    with name 'blond' 'wood' 'table' 'supporters//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_317
     with initial BC_318
@@ -11641,7 +11640,7 @@ Object -> I149_oak_armchair ""
     with article BC_321
 ;
 
-Object -> I150_comfortable_sofa ""
+Object -> I150_oak_armchair ""
     class K16_coverer
     with short_name BC_322
     has static
@@ -11649,11 +11648,11 @@ Object -> I150_comfortable_sofa ""
     with vector 0
     has mark_as_thing
     with IK2_Count 18
-    with IK2_Link I151_cushioned_bench
-    with IK16_Count 5
-    with IK16_Link I151_cushioned_bench
+    with IK2_Link I151_comfortable_sofa
+    with IK16_Count 4
+    with IK16_Link I151_comfortable_sofa
     with KD_Count 16
-    with name 'comfortable' 'sofa' 'coverers//p' 
+    with name 'oak' 'armchair' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_323
     with initial BC_324
@@ -11662,7 +11661,7 @@ Object -> I150_comfortable_sofa ""
     with article BC_327
 ;
 
-Object -> I151_cushioned_bench ""
+Object -> I151_comfortable_sofa ""
     class K16_coverer
     with short_name BC_328
     has static
@@ -11670,11 +11669,11 @@ Object -> I151_cushioned_bench ""
     with vector 0
     has mark_as_thing
     with IK2_Count 19
-    with IK2_Link I152_silver_mirror
-    with IK16_Count 6
-    with IK16_Link I180_piano
+    with IK2_Link I152_cushioned_bench
+    with IK16_Count 5
+    with IK16_Link I152_cushioned_bench
     with KD_Count 16
-    with name 'cushioned' 'bench' 'coverers//p' 
+    with name 'comfortable' 'sofa' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_329
     with initial BC_330
@@ -11683,17 +11682,19 @@ Object -> I151_cushioned_bench ""
     with article BC_333
 ;
 
-Object -> I152_silver_mirror ""
-    class K2_thing
+Object -> I152_cushioned_bench ""
+    class K16_coverer
     with short_name BC_334
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 20
-    with IK2_Link I153_stained_glass_lamp
-    with KD_Count 2
-    with name 'silver' 'mirror' 'things//p' 
+    with IK2_Link I153_silver_mirror
+    with IK16_Count 6
+    with IK16_Link I182_piano
+    with KD_Count 16
+    with name 'cushioned' 'bench' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_335
     with initial BC_336
@@ -11702,7 +11703,7 @@ Object -> I152_silver_mirror ""
     with article BC_339
 ;
 
-Object -> I153_stained_glass_lamp ""
+Object -> I153_silver_mirror ""
     class K2_thing
     with short_name BC_340
     has static
@@ -11710,9 +11711,9 @@ Object -> I153_stained_glass_lamp ""
     with vector 0
     has mark_as_thing
     with IK2_Count 21
-    with IK2_Link I154_side_chair
+    with IK2_Link I154_stained_glass_lamp
     with KD_Count 2
-    with name 'stained' 'glass' 'lamp' 'things//p' 
+    with name 'silver' 'mirror' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_341
     with initial BC_342
@@ -11721,7 +11722,7 @@ Object -> I153_stained_glass_lamp ""
     with article BC_345
 ;
 
-Object -> I154_side_chair ""
+Object -> I154_stained_glass_lamp ""
     class K2_thing
     with short_name BC_346
     has static
@@ -11729,9 +11730,9 @@ Object -> I154_side_chair ""
     with vector 0
     has mark_as_thing
     with IK2_Count 22
-    with IK2_Link I155_cupboard
+    with IK2_Link I155_side_chair
     with KD_Count 2
-    with name 'side' 'chair' 'things//p' 
+    with name 'stained' 'glass' 'lamp' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_347
     with initial BC_348
@@ -11740,7 +11741,7 @@ Object -> I154_side_chair ""
     with article BC_351
 ;
 
-Object -> I155_cupboard ""
+Object -> I155_side_chair ""
     class K2_thing
     with short_name BC_352
     has static
@@ -11748,9 +11749,9 @@ Object -> I155_cupboard ""
     with vector 0
     has mark_as_thing
     with IK2_Count 23
-    with IK2_Link I156_brass_lamp
+    with IK2_Link I156_cupboard
     with KD_Count 2
-    with name 'cupboard' 'things//p' 
+    with name 'side' 'chair' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_353
     with initial BC_354
@@ -11759,7 +11760,7 @@ Object -> I155_cupboard ""
     with article BC_357
 ;
 
-Object -> I156_brass_lamp ""
+Object -> I156_cupboard ""
     class K2_thing
     with short_name BC_358
     has static
@@ -11767,9 +11768,9 @@ Object -> I156_brass_lamp ""
     with vector 0
     has mark_as_thing
     with IK2_Count 24
-    with IK2_Link I180_piano
+    with IK2_Link I157_brass_lamp
     with KD_Count 2
-    with name 'brass' 'lamp' 'things//p' 
+    with name 'cupboard' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_359
     with initial BC_360
@@ -11778,11 +11779,29 @@ Object -> I156_brass_lamp ""
     with article BC_363
 ;
 
+Object -> I157_brass_lamp ""
+    class K2_thing
+    with short_name BC_364
+    has static
+    has scenery
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 25
+    with IK2_Link I182_piano
+    with KD_Count 2
+    with name 'brass' 'lamp' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_365
+    with initial BC_366
+    with list_together BC_367
+    with plural BC_368
+    with article BC_369
+;
+
 Object I130_ballroom ""
     class K1_room
-    with short_name BC_364
-    with description BC_365
-    has p59_suspect_room
+    with short_name BC_370
+    with description BC_371
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11790,45 +11809,24 @@ Object I130_ballroom ""
     with IK1_Link I131_library
     with KD_Count 1
     with name 'ballroom' 'rooms//p' 
-    with list_together BC_366
-    with plural BC_367
-    with article BC_368
-;
-
-Object -> I180_piano ""
-    class K16_coverer
-    with short_name BC_369
-    has static
-    has scenery
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 45
-    with IK2_Link I181_red_sofa
-    with IK16_Count 11
-    with IK16_Link I181_red_sofa
-    with KD_Count 16
-    with name 'piano' 'coverers//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_370
-    with initial BC_371
     with list_together BC_372
     with plural BC_373
     with article BC_374
 ;
 
-Object -> I181_red_sofa ""
+Object -> I182_piano ""
     class K16_coverer
     with short_name BC_375
     has static
     has scenery
     with vector 0
     has mark_as_thing
-    with IK2_Count 46
-    with IK2_Link I182_curved_purple_sofa
-    with IK16_Count 12
-    with IK16_Link I182_curved_purple_sofa
+    with IK2_Count 47
+    with IK2_Link I183_red_sofa
+    with IK16_Count 11
+    with IK16_Link I183_red_sofa
     with KD_Count 16
-    with name 'red' 'sofa' 'coverers//p' 
+    with name 'piano' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_376
     with initial BC_377
@@ -11837,19 +11835,19 @@ Object -> I181_red_sofa ""
     with article BC_380
 ;
 
-Object -> I182_curved_purple_sofa ""
+Object -> I183_red_sofa ""
     class K16_coverer
     with short_name BC_381
     has static
     has scenery
     with vector 0
     has mark_as_thing
-    with IK2_Count 47
-    with IK2_Link I183_two_high_backed_chairs
-    with IK16_Count 13
-    with IK16_Link I160_hard_dark_brown_chair
+    with IK2_Count 48
+    with IK2_Link I184_curved_purple_sofa
+    with IK16_Count 12
+    with IK16_Link I184_curved_purple_sofa
     with KD_Count 16
-    with name 'curved' 'purple' 'sofa' 'coverers//p' 
+    with name 'red' 'sofa' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_382
     with initial BC_383
@@ -11858,41 +11856,40 @@ Object -> I182_curved_purple_sofa ""
     with article BC_386
 ;
 
-Object -> I183_two_high_backed_chairs ""
-    class K2_thing
+Object -> I184_curved_purple_sofa ""
+    class K16_coverer
     with short_name BC_387
+    has static
+    has scenery
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 49
+    with IK2_Link I185_two_high_backed_chairs
+    with IK16_Count 13
+    with IK16_Link I161_hard_dark_brown_chair
+    with KD_Count 16
+    with name 'curved' 'purple' 'sofa' 'coverers//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_388
+    with initial BC_389
+    with list_together BC_390
+    with plural BC_391
+    with article BC_392
+;
+
+Object -> I185_two_high_backed_chairs ""
+    class K2_thing
+    with short_name BC_393
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_388
+    with cap_short_name BC_394
     has mark_as_thing
-    with IK2_Count 48
-    with IK2_Link I184_curio_cabinet
+    with IK2_Count 50
+    with IK2_Link I186_curio_cabinet
     with KD_Count 2
     with name 'two' 'high-backed' 'chairs' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_389
-    with initial BC_390
-    with list_together BC_391
-    with plural BC_392
-    with article BC_393
-;
-
-Object -> I184_curio_cabinet ""
-    class K5_container
-    with short_name BC_394
-    has static
-    has scenery
-    has ~open
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 49
-    with IK2_Link I185_wall_sconces
-    with IK5_Count 4
-    with IK5_Link I169_sideboard
-    with KD_Count 5
-    with name 'curio' 'cabinet' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_395
     with initial BC_396
@@ -11901,32 +11898,54 @@ Object -> I184_curio_cabinet ""
     with article BC_399
 ;
 
-Object -> I185_wall_sconces ""
-    class K2_thing
+Object -> I186_curio_cabinet ""
+    class K5_container
     with short_name BC_400
+    has static
+    has scenery
+    has ~open
+    has openable
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 51
+    with IK2_Link I187_wall_sconces
+    with IK5_Count 4
+    with IK5_Link I171_sideboard
+    with KD_Count 5
+    with name 'curio' 'cabinet' 'containers//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_401
+    with initial BC_402
+    with list_together BC_403
+    with plural BC_404
+    with article BC_405
+;
+
+Object -> I187_wall_sconces ""
+    class K2_thing
+    with short_name BC_406
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_401
+    with cap_short_name BC_407
     has mark_as_thing
-    with IK2_Count 50
-    with IK2_Link I158_bookcases
+    with IK2_Count 52
+    with IK2_Link I159_bookcases
     with KD_Count 2
     with name 'wall' 'sconces' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_402
-    with initial BC_403
-    with list_together BC_404
-    with plural BC_405
-    with article BC_406
+    with description BC_408
+    with initial BC_409
+    with list_together BC_410
+    with plural BC_411
+    with article BC_412
 ;
 
 Object I131_library ""
     class K1_room
-    with short_name BC_407
-    with description BC_408
-    has p59_suspect_room
+    with short_name BC_413
+    with description BC_414
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11934,45 +11953,26 @@ Object I131_library ""
     with IK1_Link I132_dining_room
     with KD_Count 1
     with name 'library' 'rooms//p' 
-    with list_together BC_409
-    with plural BC_410
-    with article BC_411
+    with list_together BC_415
+    with plural BC_416
+    with article BC_417
 ;
 
-Object -> I158_bookcases ""
+Object -> I159_bookcases ""
     class K6_supporter
-    with short_name BC_412
+    with short_name BC_418
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_413
-    has mark_as_thing
-    with IK2_Count 25
-    with IK2_Link I159_green_tinted_lamp
-    with IK6_Count 4
-    with IK6_Link I161_a_well_used_table
-    with KD_Count 6
-    with name 'bookcases' 'supporters//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_414
-    with initial BC_415
-    with list_together BC_416
-    with plural BC_417
-    with article BC_418
-;
-
-Object -> I159_green_tinted_lamp ""
-    class K2_thing
-    with short_name BC_419
-    has static
-    has scenery
-    with vector 0
+    with cap_short_name BC_419
     has mark_as_thing
     with IK2_Count 26
-    with IK2_Link I160_hard_dark_brown_chair
-    with KD_Count 2
-    with name 'green-tinted' 'lamp' 'things//p' 
+    with IK2_Link I160_green_tinted_lamp
+    with IK6_Count 5
+    with IK6_Link I162_a_well_used_table
+    with KD_Count 6
+    with name 'bookcases' 'supporters//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_420
     with initial BC_421
@@ -11981,19 +11981,17 @@ Object -> I159_green_tinted_lamp ""
     with article BC_424
 ;
 
-Object -> I160_hard_dark_brown_chair ""
-    class K16_coverer
+Object -> I160_green_tinted_lamp ""
+    class K2_thing
     with short_name BC_425
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 27
-    with IK2_Link I161_a_well_used_table
-    with IK16_Count 7
-    with IK16_Link I164_rumpled_couch
-    with KD_Count 16
-    with name 'hard' 'dark' 'brown' 'chair' 'coverers//p' 
+    with IK2_Link I161_hard_dark_brown_chair
+    with KD_Count 2
+    with name 'green-tinted' 'lamp' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_426
     with initial BC_427
@@ -12002,20 +12000,19 @@ Object -> I160_hard_dark_brown_chair ""
     with article BC_430
 ;
 
-Object -> I161_a_well_used_table ""
-    class K6_supporter
+Object -> I161_hard_dark_brown_chair ""
+    class K16_coverer
     with short_name BC_431
-    has proper
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 28
-    with IK2_Link I162_roaring_fireplace
-    with IK6_Count 5
-    with IK6_Link I168_dining_room_table
-    with KD_Count 6
-    with name 'a//' 'well-used' 'table' 'supporters//p' 
+    with IK2_Link I162_a_well_used_table
+    with IK16_Count 7
+    with IK16_Link I166_rumpled_couch
+    with KD_Count 16
+    with name 'hard' 'dark' 'brown' 'chair' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_432
     with initial BC_433
@@ -12024,17 +12021,20 @@ Object -> I161_a_well_used_table ""
     with article BC_436
 ;
 
-Object -> I162_roaring_fireplace ""
-    class K2_thing
+Object -> I162_a_well_used_table ""
+    class K6_supporter
     with short_name BC_437
+    has proper
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 29
-    with IK2_Link I163_threadbare_armchair
-    with KD_Count 2
-    with name 'roaring' 'fireplace' 'things//p' 
+    with IK2_Link I163_roaring_fireplace
+    with IK6_Count 6
+    with IK6_Link I164_stone_mantlepiece
+    with KD_Count 6
+    with name 'a//' 'well-used' 'table' 'supporters//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_438
     with initial BC_439
@@ -12043,7 +12043,7 @@ Object -> I162_roaring_fireplace ""
     with article BC_442
 ;
 
-Object -> I163_threadbare_armchair ""
+Object -> I163_roaring_fireplace ""
     class K2_thing
     with short_name BC_443
     has static
@@ -12051,9 +12051,9 @@ Object -> I163_threadbare_armchair ""
     with vector 0
     has mark_as_thing
     with IK2_Count 30
-    with IK2_Link I164_rumpled_couch
+    with IK2_Link I164_stone_mantlepiece
     with KD_Count 2
-    with name 'threadbare' 'armchair' 'things//p' 
+    with name 'roaring' 'fireplace' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_444
     with initial BC_445
@@ -12062,19 +12062,20 @@ Object -> I163_threadbare_armchair ""
     with article BC_448
 ;
 
-Object -> I164_rumpled_couch ""
-    class K16_coverer
+Object -> I164_stone_mantlepiece ""
+    class K6_supporter
     with short_name BC_449
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 31
-    with IK2_Link I165_solid_wood_bench
-    with IK16_Count 8
-    with IK16_Link I177_blue_upholstered_armcha
-    with KD_Count 16
-    with name 'rumpled' 'couch' 'coverers//p' 
+    with IK2_Link I165_threadbare_armchair
+    with IK6_Count 7
+    with IK6_Link I170_dining_room_table
+    with KD_Count 6
+    with name 'stone' 'mantlepiece' 'supporters//p' 'mantle' 
+    with parse_name Parse_Name_GV95
     with action_bitmap 0 0 0 0 0 0 
     with description BC_450
     with initial BC_451
@@ -12083,7 +12084,7 @@ Object -> I164_rumpled_couch ""
     with article BC_454
 ;
 
-Object -> I165_solid_wood_bench ""
+Object -> I165_threadbare_armchair ""
     class K2_thing
     with short_name BC_455
     has static
@@ -12091,9 +12092,9 @@ Object -> I165_solid_wood_bench ""
     with vector 0
     has mark_as_thing
     with IK2_Count 32
-    with IK2_Link I166_stool
+    with IK2_Link I166_rumpled_couch
     with KD_Count 2
-    with name 'solid' 'wood' 'bench' 'things//p' 
+    with name 'threadbare' 'armchair' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_456
     with initial BC_457
@@ -12102,17 +12103,19 @@ Object -> I165_solid_wood_bench ""
     with article BC_460
 ;
 
-Object -> I166_stool ""
-    class K2_thing
+Object -> I166_rumpled_couch ""
+    class K16_coverer
     with short_name BC_461
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 33
-    with IK2_Link I168_dining_room_table
-    with KD_Count 2
-    with name 'stool' 'things//p' 
+    with IK2_Link I167_solid_wood_bench
+    with IK16_Count 8
+    with IK16_Link I179_blue_upholstered_armcha
+    with KD_Count 16
+    with name 'rumpled' 'couch' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_462
     with initial BC_463
@@ -12121,117 +12124,117 @@ Object -> I166_stool ""
     with article BC_466
 ;
 
-Object I132_dining_room ""
-    class K1_room
+Object -> I167_solid_wood_bench ""
+    class K2_thing
     with short_name BC_467
-    with description BC_468
-    has p59_suspect_room
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with IK1_Count 6
-    with IK1_Link I157_billiard_room
-    with KD_Count 1
-    with name 'dining' 'room' 'rooms//p' 
-    with list_together BC_469
-    with plural BC_470
-    with article BC_471
-;
-
-Object -> I168_dining_room_table ""
-    class K6_supporter
-    with short_name BC_472
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 34
-    with IK2_Link I169_sideboard
-    with IK6_Count 6
-    with IK6_Link I175_billiard_table
-    with KD_Count 6
-    with name 'dining' 'room' 'table' 'supporters//p' 
+    with IK2_Link I168_stool
+    with KD_Count 2
+    with name 'solid' 'wood' 'bench' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_473
-    with initial BC_474
-    with list_together BC_475
-    with plural BC_476
-    with article BC_477
+    with description BC_468
+    with initial BC_469
+    with list_together BC_470
+    with plural BC_471
+    with article BC_472
 ;
 
-Object -> I169_sideboard ""
-    class K5_container
-    with short_name BC_478
+Object -> I168_stool ""
+    class K2_thing
+    with short_name BC_473
     has static
     has scenery
-    has ~open
     with vector 0
     has mark_as_thing
     with IK2_Count 35
-    with IK2_Link I170_dining_room_chairs
-    with IK5_Count 2
-    with IK5_Link I173_china_cabinet
-    with KD_Count 5
-    with name 'sideboard' 'containers//p' 
+    with IK2_Link I170_dining_room_table
+    with KD_Count 2
+    with name 'stool' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_479
-    with initial BC_480
+    with description BC_474
+    with initial BC_475
+    with list_together BC_476
+    with plural BC_477
+    with article BC_478
+;
+
+Object I132_dining_room ""
+    class K1_room
+    with short_name BC_479
+    with description BC_480
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 6
+    with IK1_Link I158_billiard_room
+    with KD_Count 1
+    with name 'dining' 'room' 'rooms//p' 
     with list_together BC_481
     with plural BC_482
     with article BC_483
 ;
 
-Object -> I170_dining_room_chairs ""
-    class K2_thing
+Object -> I170_dining_room_table ""
+    class K6_supporter
     with short_name BC_484
+    has static
+    has scenery
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 36
+    with IK2_Link I171_sideboard
+    with IK6_Count 8
+    with IK6_Link I177_billiard_table
+    with KD_Count 6
+    with name 'dining' 'room' 'table' 'supporters//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_485
+    with initial BC_486
+    with list_together BC_487
+    with plural BC_488
+    with article BC_489
+;
+
+Object -> I171_sideboard ""
+    class K5_container
+    with short_name BC_490
+    has static
+    has scenery
+    has ~open
+    has openable
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 37
+    with IK2_Link I172_dining_room_chairs
+    with IK5_Count 2
+    with IK5_Link I175_china_cabinet
+    with KD_Count 5
+    with name 'sideboard' 'containers//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_491
+    with initial BC_492
+    with list_together BC_493
+    with plural BC_494
+    with article BC_495
+;
+
+Object -> I172_dining_room_chairs ""
+    class K2_thing
+    with short_name BC_496
     has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_485
-    has mark_as_thing
-    with IK2_Count 36
-    with IK2_Link I171_small_green_sofa
-    with KD_Count 2
-    with name 'dining' 'room' 'chairs' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_486
-    with initial BC_487
-    with list_together BC_488
-    with plural BC_489
-    with article BC_490
-;
-
-Object -> I171_small_green_sofa ""
-    class K2_thing
-    with short_name BC_491
-    has static
-    has scenery
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 37
-    with IK2_Link I172_painting
-    with KD_Count 2
-    with name 'small' 'green' 'sofa' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_492
-    with initial BC_493
-    with list_together BC_494
-    with plural BC_495
-    with article BC_496
-;
-
-Object -> I172_painting ""
-    class K2_thing
-    with short_name BC_497
-    has static
-    has scenery
-    with vector 0
+    with cap_short_name BC_497
     has mark_as_thing
     with IK2_Count 38
-    with IK2_Link I173_china_cabinet
+    with IK2_Link I173_small_green_sofa
     with KD_Count 2
-    with name 'painting' 'things//p' 
+    with name 'dining' 'room' 'chairs' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_498
     with initial BC_499
@@ -12240,20 +12243,17 @@ Object -> I172_painting ""
     with article BC_502
 ;
 
-Object -> I173_china_cabinet ""
-    class K5_container
+Object -> I173_small_green_sofa ""
+    class K2_thing
     with short_name BC_503
     has static
     has scenery
-    has ~open
     with vector 0
     has mark_as_thing
     with IK2_Count 39
-    with IK2_Link I175_billiard_table
-    with IK5_Count 3
-    with IK5_Link I187_kitchen_cupboard
-    with KD_Count 5
-    with name 'china' 'cabinet' 'containers//p' 
+    with IK2_Link I174_painting
+    with KD_Count 2
+    with name 'small' 'green' 'sofa' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_504
     with initial BC_505
@@ -12262,80 +12262,79 @@ Object -> I173_china_cabinet ""
     with article BC_508
 ;
 
-Object I157_billiard_room ""
-    class K1_room
+Object -> I174_painting ""
+    class K2_thing
     with short_name BC_509
-    with description BC_510
-    has p59_suspect_room
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with IK1_Count 7
-    with IK1_Link I167_kitchen
-    with KD_Count 1
-    with name 'billiard' 'room' 'rooms//p' 
-    with parse_name Parse_Name_GV94
-    with list_together BC_511
-    with plural BC_512
-    with article BC_513
-;
-
-Object -> I175_billiard_table ""
-    class K6_supporter
-    with short_name BC_514
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 40
-    with IK2_Link I176_4_cue_sticks
-    with IK6_Count 7
-    with IK6_Link I186_kitchen_table
-    with KD_Count 6
-    with name 'billiard' 'table' 'supporters//p' 
-    with parse_name Parse_Name_GV95
+    with IK2_Link I175_china_cabinet
+    with KD_Count 2
+    with name 'painting' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_515
-    with initial BC_516
-    with list_together BC_517
-    with plural BC_518
-    with article BC_519
+    with description BC_510
+    with initial BC_511
+    with list_together BC_512
+    with plural BC_513
+    with article BC_514
 ;
 
-Object -> I176_4_cue_sticks ""
-    class K2_thing
-    with short_name BC_520
-    has proper
+Object -> I175_china_cabinet ""
+    class K5_container
+    with short_name BC_515
     has static
     has scenery
+    has ~open
+    has openable
     with vector 0
     has mark_as_thing
     with IK2_Count 41
-    with IK2_Link I177_blue_upholstered_armcha
-    with KD_Count 2
-    with name '4//' 'cue' 'sticks' 'things//p' 
+    with IK2_Link I177_billiard_table
+    with IK5_Count 3
+    with IK5_Link I189_kitchen_cupboard
+    with KD_Count 5
+    with name 'china' 'cabinet' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_521
-    with initial BC_522
+    with description BC_516
+    with initial BC_517
+    with list_together BC_518
+    with plural BC_519
+    with article BC_520
+;
+
+Object I158_billiard_room ""
+    class K1_room
+    with short_name BC_521
+    with description BC_522
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 7
+    with IK1_Link I169_kitchen
+    with KD_Count 1
+    with name 'billiard' 'room' 'rooms//p' 
+    with parse_name Parse_Name_GV96
     with list_together BC_523
     with plural BC_524
     with article BC_525
 ;
 
-Object -> I177_blue_upholstered_armcha ""
-    class K16_coverer
+Object -> I177_billiard_table ""
+    class K6_supporter
     with short_name BC_526
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 42
-    with IK2_Link I178_wet_bar
-    with IK16_Count 9
-    with IK16_Link I179_stools
-    with KD_Count 16
-    with name 'blue' 'upholstered' 'armchair' 'coverers//p' 'chair' 
-    with parse_name Parse_Name_GV96
+    with IK2_Link I178_4_cue_sticks
+    with IK6_Count 9
+    with IK6_Link I188_kitchen_table
+    with KD_Count 6
+    with name 'billiard' 'table' 'supporters//p' 
+    with parse_name Parse_Name_GV97
     with action_bitmap 0 0 0 0 0 0 
     with description BC_527
     with initial BC_528
@@ -12344,17 +12343,18 @@ Object -> I177_blue_upholstered_armcha ""
     with article BC_531
 ;
 
-Object -> I178_wet_bar ""
+Object -> I178_4_cue_sticks ""
     class K2_thing
     with short_name BC_532
+    has proper
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 43
-    with IK2_Link I179_stools
+    with IK2_Link I179_blue_upholstered_armcha
     with KD_Count 2
-    with name 'wet' 'bar' 'things//p' 
+    with name '4//' 'cue' 'sticks' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_533
     with initial BC_534
@@ -12363,105 +12363,99 @@ Object -> I178_wet_bar ""
     with article BC_537
 ;
 
-Object -> I179_stools ""
+Object -> I179_blue_upholstered_armcha ""
     class K16_coverer
     with short_name BC_538
-    has proper
     has static
     has scenery
     with vector 0
-    with cap_short_name BC_539
     has mark_as_thing
     with IK2_Count 44
-    with IK2_Link I186_kitchen_table
-    with IK16_Count 10
-    with IK16_Link I192_sink
+    with IK2_Link I180_wet_bar
+    with IK16_Count 9
+    with IK16_Link I181_stools
     with KD_Count 16
-    with name 'stools' 'coverers//p' 
+    with name 'blue' 'upholstered' 'armchair' 'coverers//p' 'chair' 
+    with parse_name Parse_Name_GV98
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_540
-    with initial BC_541
-    with list_together BC_542
-    with plural BC_543
-    with article BC_544
+    with description BC_539
+    with initial BC_540
+    with list_together BC_541
+    with plural BC_542
+    with article BC_543
 ;
 
-Object I167_kitchen ""
-    class K1_room
-    with short_name BC_545
-    with description BC_546
-    has p59_suspect_room
+Object -> I180_wet_bar ""
+    class K2_thing
+    with short_name BC_544
+    has static
+    has scenery
     with vector 0
-    with room_index -1
-    has mark_as_room
-    with IK1_Count 8
-    with IK1_Link I174_conservatory
-    with KD_Count 1
-    with name 'kitchen' 'rooms//p' 
+    has mark_as_thing
+    with IK2_Count 45
+    with IK2_Link I181_stools
+    with KD_Count 2
+    with name 'wet' 'bar' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_545
+    with initial BC_546
     with list_together BC_547
     with plural BC_548
     with article BC_549
 ;
 
-Object -> I186_kitchen_table ""
-    class K6_supporter
+Object -> I181_stools ""
+    class K16_coverer
     with short_name BC_550
+    has proper
     has static
     has scenery
     with vector 0
+    with cap_short_name BC_551
     has mark_as_thing
-    with IK2_Count 51
-    with IK2_Link I187_kitchen_cupboard
-    with IK6_Count 8
-    with IK6_Link I189_countertop
-    with KD_Count 6
-    with name 'kitchen' 'table' 'supporters//p' 
+    with IK2_Count 46
+    with IK2_Link I188_kitchen_table
+    with IK16_Count 10
+    with IK16_Link I194_sink
+    with KD_Count 16
+    with name 'stools' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_551
-    with initial BC_552
-    with list_together BC_553
-    with plural BC_554
-    with article BC_555
+    with description BC_552
+    with initial BC_553
+    with list_together BC_554
+    with plural BC_555
+    with article BC_556
 ;
 
-Object -> I187_kitchen_cupboard ""
-    class K5_container
-    with short_name BC_556
-    has static
-    has scenery
-    has ~open
-    has openable
+Object I169_kitchen ""
+    class K1_room
+    with short_name BC_557
+    with description BC_558
     with vector 0
-    has mark_as_thing
-    with IK2_Count 52
-    with IK2_Link I188_refrigerator
-    with IK5_Count 5
-    with IK5_Link I188_refrigerator
-    with KD_Count 5
-    with name 'kitchen' 'cupboard' 'containers//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_557
-    with initial BC_558
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 8
+    with IK1_Link I176_conservatory
+    with KD_Count 1
+    with name 'kitchen' 'rooms//p' 
     with list_together BC_559
     with plural BC_560
     with article BC_561
 ;
 
-Object -> I188_refrigerator ""
-    class K5_container
+Object -> I188_kitchen_table ""
+    class K6_supporter
     with short_name BC_562
     has static
     has scenery
-    has ~open
-    has openable
     with vector 0
     has mark_as_thing
     with IK2_Count 53
-    with IK2_Link I189_countertop
-    with IK5_Count 6
-    with IK5_Link I190_assortment_of_potted_pl
-    with KD_Count 5
-    with name 'refrigerator' 'containers//p' 
+    with IK2_Link I189_kitchen_cupboard
+    with IK6_Count 10
+    with IK6_Link I191_countertop
+    with KD_Count 6
+    with name 'kitchen' 'table' 'supporters//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_563
     with initial BC_564
@@ -12470,19 +12464,21 @@ Object -> I188_refrigerator ""
     with article BC_567
 ;
 
-Object -> I189_countertop ""
-    class K6_supporter
+Object -> I189_kitchen_cupboard ""
+    class K5_container
     with short_name BC_568
     has static
     has scenery
+    has ~open
+    has openable
     with vector 0
     has mark_as_thing
     with IK2_Count 54
-    with IK2_Link I190_assortment_of_potted_pl
-    with IK6_Count 9
-    with IK6_Link nothing
-    with KD_Count 6
-    with name 'countertop' 'supporters//p' 
+    with IK2_Link I190_refrigerator
+    with IK5_Count 5
+    with IK5_Link I190_refrigerator
+    with KD_Count 5
+    with name 'kitchen' 'cupboard' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_569
     with initial BC_570
@@ -12491,11 +12487,54 @@ Object -> I189_countertop ""
     with article BC_573
 ;
 
-Object I174_conservatory ""
-    class K1_room
+Object -> I190_refrigerator ""
+    class K5_container
     with short_name BC_574
+    has static
+    has scenery
+    has ~open
+    has openable
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 55
+    with IK2_Link I191_countertop
+    with IK5_Count 6
+    with IK5_Link I192_assortment_of_potted_pl
+    with KD_Count 5
+    with name 'refrigerator' 'containers//p' 
+    with action_bitmap 0 0 0 0 0 0 
     with description BC_575
-    has p59_suspect_room
+    with initial BC_576
+    with list_together BC_577
+    with plural BC_578
+    with article BC_579
+;
+
+Object -> I191_countertop ""
+    class K6_supporter
+    with short_name BC_580
+    has static
+    has scenery
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 56
+    with IK2_Link I192_assortment_of_potted_pl
+    with IK6_Count 11
+    with IK6_Link nothing
+    with KD_Count 6
+    with name 'countertop' 'supporters//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_581
+    with initial BC_582
+    with list_together BC_583
+    with plural BC_584
+    with article BC_585
+;
+
+Object I176_conservatory ""
+    class K1_room
+    with short_name BC_586
+    with description BC_587
     with vector 0
     with room_index -1
     has mark_as_room
@@ -12503,67 +12542,24 @@ Object I174_conservatory ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'conservatory' 'rooms//p' 
-    with list_together BC_576
-    with plural BC_577
-    with article BC_578
-;
-
-Object -> I190_assortment_of_potted_pl ""
-    class K5_container
-    with short_name BC_579
-    has static
-    has scenery
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 55
-    with IK2_Link I191_utility_closet
-    with IK5_Count 7
-    with IK5_Link I191_utility_closet
-    with KD_Count 5
-    with name 'assortment' 'of' 'potted' 'plants' 'containers//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_580
-    with initial BC_581
-    with list_together BC_582
-    with plural BC_583
-    with article BC_584
-;
-
-Object -> I191_utility_closet ""
-    class K5_container
-    with short_name BC_585
-    has static
-    has scenery
-    has ~open
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 56
-    with IK2_Link I192_sink
-    with IK5_Count 8
-    with IK5_Link nothing
-    with KD_Count 5
-    with name 'utility' 'closet' 'containers//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_586
-    with initial BC_587
     with list_together BC_588
     with plural BC_589
     with article BC_590
 ;
 
-Object -> I192_sink ""
-    class K16_coverer
+Object -> I192_assortment_of_potted_pl ""
+    class K5_container
     with short_name BC_591
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 57
-    with IK2_Link I193_yellow_bench
-    with IK16_Count 14
-    with IK16_Link I193_yellow_bench
-    with KD_Count 16
-    with name 'sink' 'coverers//p' 
+    with IK2_Link I193_utility_closet
+    with IK5_Count 7
+    with IK5_Link I193_utility_closet
+    with KD_Count 5
+    with name 'assortment' 'of' 'potted' 'plants' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_592
     with initial BC_593
@@ -12572,19 +12568,21 @@ Object -> I192_sink ""
     with article BC_596
 ;
 
-Object -> I193_yellow_bench ""
-    class K16_coverer
+Object -> I193_utility_closet ""
+    class K5_container
     with short_name BC_597
     has static
     has scenery
+    has ~open
+    has openable
     with vector 0
     has mark_as_thing
     with IK2_Count 58
-    with IK2_Link I194_colonel_mustard
-    with IK16_Count 15
-    with IK16_Link nothing
-    with KD_Count 16
-    with name 'yellow' 'bench' 'coverers//p' 
+    with IK2_Link I194_sink
+    with IK5_Count 8
+    with IK5_Link nothing
+    with KD_Count 5
+    with name 'utility' 'closet' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_598
     with initial BC_599
@@ -12593,51 +12591,49 @@ Object -> I193_yellow_bench ""
     with article BC_602
 ;
 
-Object I194_colonel_mustard ""
-    class K10_man
+Object -> I194_sink ""
+    class K16_coverer
     with short_name BC_603
-    with description BC_604
-    has proper
+    has static
+    has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 59
-    with IK2_Link I195_professor_plum
-    with IK8_Count 1
-    with IK8_Link I195_professor_plum
-    with IK10_Count 0
-    with IK10_Link I195_professor_plum
-    with KD_Count 10
-    with name 'colonel' 'mustard' 'men//p' 
+    with IK2_Link I195_yellow_bench
+    with IK16_Count 14
+    with IK16_Link I195_yellow_bench
+    with KD_Count 16
+    with name 'sink' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
+    with description BC_604
     with initial BC_605
     with list_together BC_606
     with plural BC_607
     with article BC_608
 ;
 
-Object I195_professor_plum ""
-    class K10_man
+Object -> I195_yellow_bench ""
+    class K16_coverer
     with short_name BC_609
-    with description BC_610
-    has proper
+    has static
+    has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 60
-    with IK2_Link I196_mr_green
-    with IK8_Count 2
-    with IK8_Link I196_mr_green
-    with IK10_Count 1
-    with IK10_Link I196_mr_green
-    with KD_Count 10
-    with name 'professor' 'plum' 'men//p' 
+    with IK2_Link I196_colonel_mustard
+    with IK16_Count 15
+    with IK16_Link nothing
+    with KD_Count 16
+    with name 'yellow' 'bench' 'coverers//p' 
     with action_bitmap 0 0 0 0 0 0 
+    with description BC_610
     with initial BC_611
     with list_together BC_612
     with plural BC_613
     with article BC_614
 ;
 
-Object I196_mr_green ""
+Object I196_colonel_mustard ""
     class K10_man
     with short_name BC_615
     with description BC_616
@@ -12645,13 +12641,13 @@ Object I196_mr_green ""
     with vector 0
     has mark_as_thing
     with IK2_Count 61
-    with IK2_Link I197_miss_scarlet
-    with IK8_Count 3
-    with IK8_Link I197_miss_scarlet
-    with IK10_Count 2
-    with IK10_Link nothing
+    with IK2_Link I197_professor_plum
+    with IK8_Count 1
+    with IK8_Link I197_professor_plum
+    with IK10_Count 0
+    with IK10_Link I197_professor_plum
     with KD_Count 10
-    with name 'mr' 'green' 'men//p' 
+    with name 'colonel' 'mustard' 'men//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_617
     with list_together BC_618
@@ -12659,21 +12655,21 @@ Object I196_mr_green ""
     with article BC_620
 ;
 
-Object I197_miss_scarlet ""
-    class K11_woman
+Object I197_professor_plum ""
+    class K10_man
     with short_name BC_621
     with description BC_622
     has proper
     with vector 0
     has mark_as_thing
     with IK2_Count 62
-    with IK2_Link I198_mrs_white
-    with IK8_Count 4
-    with IK8_Link I198_mrs_white
-    with IK11_Count 0
-    with IK11_Link I198_mrs_white
-    with KD_Count 11
-    with name 'miss' 'scarlet' 'women//p' 
+    with IK2_Link I198_mr_green
+    with IK8_Count 2
+    with IK8_Link I198_mr_green
+    with IK10_Count 1
+    with IK10_Link I198_mr_green
+    with KD_Count 10
+    with name 'professor' 'plum' 'men//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_623
     with list_together BC_624
@@ -12681,21 +12677,21 @@ Object I197_miss_scarlet ""
     with article BC_626
 ;
 
-Object I198_mrs_white ""
-    class K11_woman
+Object I198_mr_green ""
+    class K10_man
     with short_name BC_627
     with description BC_628
     has proper
     with vector 0
     has mark_as_thing
     with IK2_Count 63
-    with IK2_Link I199_ms_peacock
-    with IK8_Count 5
-    with IK8_Link I199_ms_peacock
-    with IK11_Count 1
-    with IK11_Link I199_ms_peacock
-    with KD_Count 11
-    with name 'mrs' 'white' 'women//p' 
+    with IK2_Link I199_miss_scarlet
+    with IK8_Count 3
+    with IK8_Link I199_miss_scarlet
+    with IK10_Count 2
+    with IK10_Link nothing
+    with KD_Count 10
+    with name 'mr' 'green' 'men//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_629
     with list_together BC_630
@@ -12703,7 +12699,7 @@ Object I198_mrs_white ""
     with article BC_632
 ;
 
-Object I199_ms_peacock ""
+Object I199_miss_scarlet ""
     class K11_woman
     with short_name BC_633
     with description BC_634
@@ -12711,13 +12707,13 @@ Object I199_ms_peacock ""
     with vector 0
     has mark_as_thing
     with IK2_Count 64
-    with IK2_Link I207_dull_silver_candlestick
-    with IK8_Count 6
-    with IK8_Link nothing
-    with IK11_Count 2
-    with IK11_Link nothing
+    with IK2_Link I200_mrs_white
+    with IK8_Count 4
+    with IK8_Link I200_mrs_white
+    with IK11_Count 0
+    with IK11_Link I200_mrs_white
     with KD_Count 11
-    with name 'ms' 'peacock' 'women//p' 
+    with name 'miss' 'scarlet' 'women//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_635
     with list_together BC_636
@@ -12725,20 +12721,21 @@ Object I199_ms_peacock ""
     with article BC_638
 ;
 
-Object I207_dull_silver_candlestick ""
-    class K23_candlestick
+Object I200_mrs_white ""
+    class K11_woman
     with short_name BC_639
     with description BC_640
+    has proper
     with vector 0
     has mark_as_thing
     with IK2_Count 65
-    with IK2_Link I208_bronze_candlestick
-    with IK17_Count 0
-    with IK17_Link I208_bronze_candlestick
-    with IK23_Count 0
-    with IK23_Link I208_bronze_candlestick
-    with KD_Count 23
-    with name 'dull' 'silver' 'candlestick' 'candlesticks//p' 
+    with IK2_Link I201_ms_peacock
+    with IK8_Count 5
+    with IK8_Link I201_ms_peacock
+    with IK11_Count 1
+    with IK11_Link I201_ms_peacock
+    with KD_Count 11
+    with name 'mrs' 'white' 'women//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_641
     with list_together BC_642
@@ -12746,20 +12743,21 @@ Object I207_dull_silver_candlestick ""
     with article BC_644
 ;
 
-Object I208_bronze_candlestick ""
-    class K23_candlestick
+Object I201_ms_peacock ""
+    class K11_woman
     with short_name BC_645
     with description BC_646
+    has proper
     with vector 0
     has mark_as_thing
     with IK2_Count 66
-    with IK2_Link I209_pocket_knife
-    with IK17_Count 1
-    with IK17_Link I209_pocket_knife
-    with IK23_Count 1
-    with IK23_Link nothing
-    with KD_Count 23
-    with name 'bronze' 'candlestick' 'candlesticks//p' 
+    with IK2_Link I209_dull_silver_candlestick
+    with IK8_Count 6
+    with IK8_Link nothing
+    with IK11_Count 2
+    with IK11_Link nothing
+    with KD_Count 11
+    with name 'ms' 'peacock' 'women//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_647
     with list_together BC_648
@@ -12767,20 +12765,20 @@ Object I208_bronze_candlestick ""
     with article BC_650
 ;
 
-Object I209_pocket_knife ""
-    class K18_knife
+Object I209_dull_silver_candlestick ""
+    class K23_candlestick
     with short_name BC_651
     with description BC_652
     with vector 0
     has mark_as_thing
     with IK2_Count 67
-    with IK2_Link I210_butcher_knife
-    with IK17_Count 2
-    with IK17_Link I210_butcher_knife
-    with IK18_Count 0
-    with IK18_Link I210_butcher_knife
-    with KD_Count 18
-    with name 'pocket' 'knife' 'knives//p' 
+    with IK2_Link I210_bronze_candlestick
+    with IK17_Count 0
+    with IK17_Link I210_bronze_candlestick
+    with IK23_Count 0
+    with IK23_Link I210_bronze_candlestick
+    with KD_Count 23
+    with name 'dull' 'silver' 'candlestick' 'candlesticks//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_653
     with list_together BC_654
@@ -12788,20 +12786,20 @@ Object I209_pocket_knife ""
     with article BC_656
 ;
 
-Object I210_butcher_knife ""
-    class K18_knife
+Object I210_bronze_candlestick ""
+    class K23_candlestick
     with short_name BC_657
     with description BC_658
     with vector 0
     has mark_as_thing
     with IK2_Count 68
-    with IK2_Link I211_small_pistol
-    with IK17_Count 3
-    with IK17_Link I211_small_pistol
-    with IK18_Count 1
-    with IK18_Link nothing
-    with KD_Count 18
-    with name 'butcher' 'knife' 'knives//p' 
+    with IK2_Link I211_pocket_knife
+    with IK17_Count 1
+    with IK17_Link I211_pocket_knife
+    with IK23_Count 1
+    with IK23_Link nothing
+    with KD_Count 23
+    with name 'bronze' 'candlestick' 'candlesticks//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_659
     with list_together BC_660
@@ -12809,21 +12807,20 @@ Object I210_butcher_knife ""
     with article BC_662
 ;
 
-Object I211_small_pistol ""
-    class K21_revolver
+Object I211_pocket_knife ""
+    class K18_knife
     with short_name BC_663
     with description BC_664
     with vector 0
     has mark_as_thing
     with IK2_Count 69
-    with IK2_Link I212_heavy_gray_handgun
-    with IK17_Count 4
-    with IK17_Link I212_heavy_gray_handgun
-    with IK21_Count 0
-    with IK21_Link I212_heavy_gray_handgun
-    with KD_Count 21
-    with name 'small' 'pistol' 'revolvers//p' 'gun' 'revolver' 
-    with parse_name Parse_Name_GV97
+    with IK2_Link I212_butcher_knife
+    with IK17_Count 2
+    with IK17_Link I212_butcher_knife
+    with IK18_Count 0
+    with IK18_Link I212_butcher_knife
+    with KD_Count 18
+    with name 'pocket' 'knife' 'knives//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_665
     with list_together BC_666
@@ -12831,21 +12828,20 @@ Object I211_small_pistol ""
     with article BC_668
 ;
 
-Object I212_heavy_gray_handgun ""
-    class K21_revolver
+Object I212_butcher_knife ""
+    class K18_knife
     with short_name BC_669
     with description BC_670
     with vector 0
     has mark_as_thing
     with IK2_Count 70
-    with IK2_Link I213_thin_rope
-    with IK17_Count 5
-    with IK17_Link I213_thin_rope
-    with IK21_Count 1
-    with IK21_Link nothing
-    with KD_Count 21
-    with name 'heavy' 'gray' 'handgun' 'revolvers//p' 'gun' 'pistol' 'revolver' 
-    with parse_name Parse_Name_GV98
+    with IK2_Link I213_small_pistol
+    with IK17_Count 3
+    with IK17_Link I213_small_pistol
+    with IK18_Count 1
+    with IK18_Link nothing
+    with KD_Count 18
+    with name 'butcher' 'knife' 'knives//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_671
     with list_together BC_672
@@ -12853,20 +12849,21 @@ Object I212_heavy_gray_handgun ""
     with article BC_674
 ;
 
-Object I213_thin_rope ""
-    class K22_rope
+Object I213_small_pistol ""
+    class K21_revolver
     with short_name BC_675
     with description BC_676
     with vector 0
     has mark_as_thing
     with IK2_Count 71
-    with IK2_Link I214_braided_curtain_tie
-    with IK17_Count 6
-    with IK17_Link I214_braided_curtain_tie
-    with IK22_Count 0
-    with IK22_Link I214_braided_curtain_tie
-    with KD_Count 22
-    with name 'thin' 'rope' 'ropes//p' 
+    with IK2_Link I214_heavy_gray_handgun
+    with IK17_Count 4
+    with IK17_Link I214_heavy_gray_handgun
+    with IK21_Count 0
+    with IK21_Link I214_heavy_gray_handgun
+    with KD_Count 21
+    with name 'small' 'pistol' 'revolvers//p' 'gun' 'revolver' 
+    with parse_name Parse_Name_GV99
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_677
     with list_together BC_678
@@ -12874,20 +12871,21 @@ Object I213_thin_rope ""
     with article BC_680
 ;
 
-Object I214_braided_curtain_tie ""
-    class K22_rope
+Object I214_heavy_gray_handgun ""
+    class K21_revolver
     with short_name BC_681
     with description BC_682
     with vector 0
     has mark_as_thing
     with IK2_Count 72
-    with IK2_Link I215_lugwrench
-    with IK17_Count 7
-    with IK17_Link I215_lugwrench
-    with IK22_Count 1
-    with IK22_Link nothing
-    with KD_Count 22
-    with name 'braided' 'curtain' 'tie' 'ropes//p' 
+    with IK2_Link I215_thin_rope
+    with IK17_Count 5
+    with IK17_Link I215_thin_rope
+    with IK21_Count 1
+    with IK21_Link nothing
+    with KD_Count 21
+    with name 'heavy' 'gray' 'handgun' 'revolvers//p' 'gun' 'pistol' 'revolver' 
+    with parse_name Parse_Name_GV100
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_683
     with list_together BC_684
@@ -12895,21 +12893,20 @@ Object I214_braided_curtain_tie ""
     with article BC_686
 ;
 
-Object I215_lugwrench ""
-    class K20_wrench
+Object I215_thin_rope ""
+    class K22_rope
     with short_name BC_687
     with description BC_688
     with vector 0
     has mark_as_thing
     with IK2_Count 73
-    with IK2_Link I216_pipe_wrench
-    with IK17_Count 8
-    with IK17_Link I216_pipe_wrench
-    with IK20_Count 0
-    with IK20_Link I216_pipe_wrench
-    with KD_Count 20
-    with name 'lugwrench' 'wrenches//p' 'wrench' 
-    with parse_name Parse_Name_GV99
+    with IK2_Link I216_braided_curtain_tie
+    with IK17_Count 6
+    with IK17_Link I216_braided_curtain_tie
+    with IK22_Count 0
+    with IK22_Link I216_braided_curtain_tie
+    with KD_Count 22
+    with name 'thin' 'rope' 'ropes//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_689
     with list_together BC_690
@@ -12917,20 +12914,20 @@ Object I215_lugwrench ""
     with article BC_692
 ;
 
-Object I216_pipe_wrench ""
-    class K20_wrench
+Object I216_braided_curtain_tie ""
+    class K22_rope
     with short_name BC_693
     with description BC_694
     with vector 0
     has mark_as_thing
     with IK2_Count 74
-    with IK2_Link I217_lead_pipe
-    with IK17_Count 9
-    with IK17_Link I217_lead_pipe
-    with IK20_Count 1
-    with IK20_Link nothing
-    with KD_Count 20
-    with name 'pipe' 'wrench' 'wrenches//p' 
+    with IK2_Link I217_lugwrench
+    with IK17_Count 7
+    with IK17_Link I217_lugwrench
+    with IK22_Count 1
+    with IK22_Link nothing
+    with KD_Count 22
+    with name 'braided' 'curtain' 'tie' 'ropes//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_695
     with list_together BC_696
@@ -12938,13 +12935,56 @@ Object I216_pipe_wrench ""
     with article BC_698
 ;
 
-Object I217_lead_pipe ""
-    class K19_pipe
+Object I217_lugwrench ""
+    class K20_wrench
     with short_name BC_699
     with description BC_700
     with vector 0
     has mark_as_thing
     with IK2_Count 75
+    with IK2_Link I218_pipe_wrench
+    with IK17_Count 8
+    with IK17_Link I218_pipe_wrench
+    with IK20_Count 0
+    with IK20_Link I218_pipe_wrench
+    with KD_Count 20
+    with name 'lugwrench' 'wrenches//p' 'wrench' 
+    with parse_name Parse_Name_GV101
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_701
+    with list_together BC_702
+    with plural BC_703
+    with article BC_704
+;
+
+Object I218_pipe_wrench ""
+    class K20_wrench
+    with short_name BC_705
+    with description BC_706
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 76
+    with IK2_Link I219_lead_pipe
+    with IK17_Count 9
+    with IK17_Link I219_lead_pipe
+    with IK20_Count 1
+    with IK20_Link nothing
+    with KD_Count 20
+    with name 'pipe' 'wrench' 'wrenches//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_707
+    with list_together BC_708
+    with plural BC_709
+    with article BC_710
+;
+
+Object I219_lead_pipe ""
+    class K19_pipe
+    with short_name BC_711
+    with description BC_712
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 77
     with IK2_Link nothing
     with IK17_Count 10
     with IK17_Link nothing
@@ -12953,10 +12993,10 @@ Object I217_lead_pipe ""
     with KD_Count 19
     with name 'lead' 'pipe' 'pipes//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with initial BC_701
-    with list_together BC_702
-    with plural BC_703
-    with article BC_704
+    with initial BC_713
+    with list_together BC_714
+    with plural BC_715
+    with article BC_716
 ;
 
 Constant I71_german_language = 1;
@@ -13010,19 +13050,19 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_705) ! 25 command prompt
+  (BC_717) ! 25 command prompt
   (I73_english_language) ! 29 language of play
-  (BC_706) ! 32 story author
-  (BC_707) ! 33 story headline
-  (BC_708) ! 34 story genre
-  (BC_709) ! 35 story description
+  (BC_718) ! 32 story author
+  (BC_719) ! 33 story headline
+  (BC_720) ! 34 story genre
+  (BC_721) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
-  (BC_710) ! 60 debuglist
+  (BC_722) ! 60 debug list
   (I126_entryway) ! 61 crimescene
   (selfobj) ! 62 murderer
-  (I207_dull_silver_candlestick) ! 63 murder weapon
+  (I209_dull_silver_candlestick) ! 63 murder weapon
 ;
 
 
@@ -13034,14 +13074,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_711) (BC_712) (BC_713) (BC_714) (BC_715) ;
+Array tab_0_0 table $0664 0 (BC_723) (BC_724) (BC_725) (BC_726) (BC_727) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
-Array tab_0_2 table $2066 2 (Consult_Grammar_104) (Consult_Grammar_105) (Consult_Grammar_106) (Consult_Grammar_107) (Consult_Grammar_108) ;
+Array tab_0_2 table $2066 2 (Consult_Grammar_106) (Consult_Grammar_107) (Consult_Grammar_108) (Consult_Grammar_109) (Consult_Grammar_110) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -13051,7 +13091,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $ff $ff $ff $ff $ff $ff $ff $ff $ff $1f  ! Column 1
+  $ff $ff $ff $ff $ff $ff $ff $ff $ff $7f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -13825,26 +13865,26 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! When play begins:
 [ R_811 
-    tmp_0 ! Let/loop value, e.g., 'mrdr': thing
+    tmp_0 ! Let/loop value, e.g., 'm': thing
     ;
     if (debug_rules) DB_Rule(R_811, 811);
-    ! [2: let mrdr be a random person who is not the player]
+    ! [2: let m be a random person who is not the player]
 
     		tmp_0 = (Prop_2());
-    ! [3: now the murderer is mrdr]
-    (Global_Vars-->12) = tmp_0; if (~~((Global_Vars-->12) ofclass K8_person)) RunTimeProblem(RTP_WRONGASSIGNEDKIND, (Global_Vars-->12), "now the murderer is mrdr", "person");;
+    ! [3: now the murderer is m]
+    (Global_Vars-->12) = tmp_0; if (~~((Global_Vars-->12) ofclass K8_person)) RunTimeProblem(RTP_WRONGASSIGNEDKIND, (Global_Vars-->12), "now the murderer is m", "person");;
     ! [4: move colonel mustard to a random suspect room]
-    MoveObject(I194_colonel_mustard, (Prop_3()), 0, false);
+    MoveObject(I196_colonel_mustard, (Prop_3()), 0, false);
     ! [5: move professor plum to a random suspect room]
-    MoveObject(I195_professor_plum, (Prop_4()), 0, false);
+    MoveObject(I197_professor_plum, (Prop_4()), 0, false);
     ! [6: move mr green to a random suspect room]
-    MoveObject(I196_mr_green, (Prop_5()), 0, false);
+    MoveObject(I198_mr_green, (Prop_5()), 0, false);
     ! [7: move miss scarlet to a random suspect room]
-    MoveObject(I197_miss_scarlet, (Prop_6()), 0, false);
+    MoveObject(I199_miss_scarlet, (Prop_6()), 0, false);
     ! [8: move mrs white to a random suspect room]
-    MoveObject(I198_mrs_white, (Prop_7()), 0, false);
+    MoveObject(I200_mrs_white, (Prop_7()), 0, false);
     ! [9: move ms peacock to a random suspect room]
-    MoveObject(I199_ms_peacock, (Prop_8()), 0, false);
+    MoveObject(I201_ms_peacock, (Prop_8()), 0, false);
     rfalse;
 ];
 ! No specific request
@@ -13878,7 +13918,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ! [3: now the right hand status line is ~[time of day]~]
     BlkValueCopy(right_hand_status_line, (TEXT_TY_ExpandIfPerishable(I7SFRAME,TX_S_140)));
     ! [4: now the command prompt is ~> ~]
-    BlkValueCopy((Global_Vars-->1), TX_L_164);
+    BlkValueCopy((Global_Vars-->1), TX_L_166);
     rfalse;
 ];
 ! No specific request
@@ -13919,7 +13959,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
         {! [5: let cov be a random coverer]
 
             		tmp_3 = (Prop_11());
-            ! [6: add ~putting [w] under [cov]~ to debuglist]
+            ! [6: add ~putting [w] under [cov]~ to debug list]
             LIST_OF_TY_InsertItem((Global_Vars-->10), BlkValueCopy(I7SFRAME, ((LocalParking-->0=tmp_0),(LocalParking-->1=tmp_1),(LocalParking-->2=tmp_2),(LocalParking-->3=tmp_3),TEXT_TY_ExpandIfPerishable((I7SFRAME+WORDSIZE*2),TX_S_141))), 0, 0, 0);
             ! [7: now the w is beneath cov]
             (RGuard_MT_2(tmp_0,tmp_3));
@@ -13929,7 +13969,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
         {! [9: let con be a random container]
 
             		tmp_3 = (Prop_12());
-            ! [10: add ~putting [w] inside [con]~ to debuglist]
+            ! [10: add ~putting [w] inside [con]~ to debug list]
             LIST_OF_TY_InsertItem((Global_Vars-->10), BlkValueCopy((I7SFRAME+WORDSIZE*4), ((LocalParking-->0=tmp_0),(LocalParking-->1=tmp_1),(LocalParking-->2=tmp_2),(LocalParking-->3=tmp_3),TEXT_TY_ExpandIfPerishable((I7SFRAME+WORDSIZE*6),TX_S_142))), 0, 0, 0);
             ! [11: now the w is inside con]
             MoveObject(tmp_0,tmp_3);
@@ -13939,7 +13979,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
         {! [13: let sup be a random supporter]
 
             		tmp_3 = (Prop_13());
-            ! [14: add ~putting [w] on [sup]~ to debuglist]
+            ! [14: add ~putting [w] on [sup]~ to debug list]
             LIST_OF_TY_InsertItem((Global_Vars-->10), BlkValueCopy((I7SFRAME+WORDSIZE*8), ((LocalParking-->0=tmp_0),(LocalParking-->1=tmp_1),(LocalParking-->2=tmp_2),(LocalParking-->3=tmp_3),TEXT_TY_ExpandIfPerishable((I7SFRAME+WORDSIZE*10),TX_S_143))), 0, 0, 0);
             ! [15: now the w is on sup]
             MoveObject(tmp_0,tmp_3);
@@ -13971,7 +14011,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: let sup be a random supporter]
 
         		tmp_2 = (Prop_15());
-        ! [4: add ~putting [cs] on [sup]~ to debuglist]
+        ! [4: add ~putting [cs] on [sup]~ to debug list]
         LIST_OF_TY_InsertItem((Global_Vars-->10), BlkValueCopy(I7SFRAME, ((LocalParking-->0=tmp_0),(LocalParking-->1=tmp_1),(LocalParking-->2=tmp_2),TEXT_TY_ExpandIfPerishable((I7SFRAME+WORDSIZE*2),TX_S_144))), 0, 0, 0);
         ! [5: now the cs is on sup]
         MoveObject(tmp_0,tmp_2);
@@ -14004,7 +14044,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: let con be a random container]
 
         		tmp_0 = (Prop_16());
-        ! [4: add ~putting murder weapon [murder weapon] in [the con]~ to debuglist]
+        ! [4: add ~putting murder weapon [murder weapon] in [the con]~ to debug list]
         LIST_OF_TY_InsertItem((Global_Vars-->10), BlkValueCopy(I7SFRAME, ((LocalParking-->0=tmp_0),TEXT_TY_ExpandIfPerishable((I7SFRAME+WORDSIZE*2),TX_S_145))), 0, 0, 0);
         ! [5: now the murder weapon is in con]
         MoveObject((Global_Vars-->13),tmp_0);
@@ -14012,7 +14052,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
         ! [6: let cov be a random coverer]
 
         		tmp_0 = (Prop_17());
-        ! [7: add ~putting murder weapon [murder weapon] under [the cov]~ to debuglist]
+        ! [7: add ~putting murder weapon [murder weapon] under [the cov]~ to debug list]
         LIST_OF_TY_InsertItem((Global_Vars-->10), BlkValueCopy((I7SFRAME+WORDSIZE*4), ((LocalParking-->0=tmp_0),TEXT_TY_ExpandIfPerishable((I7SFRAME+WORDSIZE*6),TX_S_146))), 0, 0, 0);
         ! [8: now the murder weapon is under cov]
         (RGuard_MT_2((Global_Vars-->13),tmp_0));
@@ -14636,7 +14676,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Before examining in assortment of potted plants:
 [ R_803 ;
-    if ((((action ==##Examine) &&  (actor==player) && ((real_location == I190_assortment_of_potted_pl) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Examine) &&  (actor==player) && ((real_location == I192_assortment_of_potted_pl) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_803, 803);
     ! [2: say ~You look through some of the larger plant pots and vases.~]
@@ -14649,7 +14689,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: Instead (B20_instead)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/11 ! Instead of going north in the Hall:
+! Rule 1/11 ! Instead of going north in the hall:
 !   === equally specific with ===
 ! Rule 2/11 ! Instead of going up in Study:
 !   === equally specific with ===
@@ -14672,7 +14712,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! Rule 11/11 ! Instead of dusting for fingerprints:
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
-! Instead of going north in the Hall:
+! Instead of going north in the hall:
 [ R_802 ;
     if ((((action ==##Go) &&  (actor==player) && ((noun == I51_north) && (true)) && ((real_location == I127_hall) && (true))))) { ! Runs only when pattern matches
     self = noun;
@@ -14698,7 +14738,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of going up in Kitchen:
 [ R_808 ;
-    if ((((action ==##Go) &&  (actor==player) && ((noun == I59_up) && (true)) && ((real_location == I167_kitchen) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Go) &&  (actor==player) && ((noun == I59_up) && (true)) && ((real_location == I169_kitchen) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_808, 808);
     ! [2: say ~You can't go that way.~]
@@ -14710,7 +14750,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of going up in Conservatory:
 [ R_809 ;
-    if ((((action ==##Go) &&  (actor==player) && ((noun == I59_up) && (true)) && ((real_location == I174_conservatory) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Go) &&  (actor==player) && ((noun == I59_up) && (true)) && ((real_location == I176_conservatory) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_809, 809);
     ! [2: say ~You can't go that way.~]
@@ -17900,17 +17940,17 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: if the player is the actor]
         if (((player == actor)))
         {! [4: if the player's command includes ~stand~]
-            if (((matched_text=SnippetIncludes(Consult_Grammar_109,players_command))))
+            if (((matched_text=SnippetIncludes(Consult_Grammar_111,players_command))))
             {! [5: say ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 say__p=1;! [6: ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 ParaContent(); print (TEXT_TY_Say) (TX_R_223); new_line; .L_Say133; .L_SayX133;} else {
                 ! [7: if the player's command includes ~sit~]
-                if (((matched_text=SnippetIncludes(Consult_Grammar_110,players_command))))
+                if (((matched_text=SnippetIncludes(Consult_Grammar_112,players_command))))
                 {! [8: say ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     say__p=1;! [9: ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     ParaContent(); print (TEXT_TY_Say) (TX_R_224); new_line; .L_Say134; .L_SayX134;} else {
                     ! [10: if the player's command includes ~lie~]
-                    if (((matched_text=SnippetIncludes(Consult_Grammar_111,players_command))))
+                    if (((matched_text=SnippetIncludes(Consult_Grammar_113,players_command))))
                     {! [11: say ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         say__p=1;! [12: ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         ParaContent(); print (TEXT_TY_Say) (TX_R_225); new_line; .L_Say135; .L_SayX135;} else {
@@ -21825,9 +21865,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
 [ R_818 ;
     if (actor == player) {
     if (debug_rules) DB_Rule(R_818, 818);
-    ! [2: say ~In each game, one person, weapon, and room offer a clue that they were involved in the murder. It's your goal to identify the person, place, and weapon used.^^To move around, you can enter the direction you want to go: north, south, east, west, northwest, northeast, southwest, southeast, up, or down. You can abbreviate any of these directions with their common abbreviations: n, s, e, w, ne, sw, etc.^^When you see people and objects in rooms, you can look at them by typing 'look at <person>' or 'look at <object>. For example: 'look at Colonel Mustard' or 'look at silver candlestick'. You may also 'investigate' or 'look around' a room and 'look at' or 'examine' its furniture and decor. You may even find it useful to look under, behind, and inside certain objects.^^You may abbreviate the word 'look' as 'l'. Many people and object names can also be shortened. In the example above, for example, you could type 'l at Mustard', 'l at candlestick' , or even 'l at silver'.~]
-    say__p=1;! [3: ~In each game, one person, weapon, and room offer a clue that they were involved in the murder. It's your goal to identify the person, place, and weapon used.^^To move around, you can enter the direction you want to go: north, south, east, west, northwest, northeast, southwest, southeast, up, or down. You can abbreviate any of these directions with their common abbreviations: n, s, e, w, ne, sw, etc.^^When you see people and objects in rooms, you can look at them by typing 'look at <person>' or 'look at <object>. For example: 'look at Colonel Mustard' or 'look at silver candlestick'. You may also 'investigate' or 'look around' a room and 'look at' or 'examine' its furniture and decor. You may even find it useful to look under, behind, and inside certain objects.^^You may abbreviate the word 'look' as 'l'. Many people and object names can also be shortened. In the example above, for example, you could type 'l at Mustard', 'l at candlestick' , or even 'l at silver'.~]
-    ParaContent(); print "In each game, one person, weapon, and room offer a clue that they were involved in the murder. It's your goal to identify the person, place, and weapon used.^^To move around, you can enter the direction you want to go: north, south, east, west, northwest, northeast, southwest, southeast, up, or down. You can abbreviate any of these directions with their common abbreviations: n, s, e, w, ne, sw, etc.^^When you see people and objects in rooms, you can look at them by typing ~look at <person>~ or ~look at <object>. For example: ~look at Colonel Mustard~ or ~look at silver candlestick~. You may also ~investigate~ or ~look around~ a room and ~look at~ or ~examine~ its furniture and decor. You may even find it useful to look under, behind, and inside certain objects.^^You may abbreviate the word ~look~ as ~l~. Many people and object names can also be shortened. In the example above, for example, you could type ~l at Mustard~, ~l at candlestick~ , or even ~l at silver~."; new_line; .L_Say316; .L_SayX316;} else if (debug_rules > 1) DB_Rule(R_818, 818, 'actor');
+    ! [2: say ~In each game, one person, weapon, and room offer a clue that they were involved in the murder. It's your goal to identify the person, place, and weapon used before you run out of time and the murderer escapes.^^To move around, you can enter the direction you want to go: north, south, east, west, northwest, northeast, southwest, southeast, up, or down. You can abbreviate any of these directions with their common abbreviations: n, s, e, w, ne, sw, etc.^^When you see people and objects in rooms, you can look at them by typing 'look at <person>' or 'look at <object>. For example: 'look at Colonel Mustard' or 'look at silver candlestick'. You may also 'investigate' or 'look around' a room and 'look at' or 'examine' its furniture and decor. You may even find it useful to look under, behind, and inside certain objects.^^You may abbreviate the word 'look' as 'l'. Many people and object names can also be shortened. In the example above, for example, you could type 'l at Mustard', 'l at candlestick' , or even 'l at silver'.~]
+    say__p=1;! [3: ~In each game, one person, weapon, and room offer a clue that they were involved in the murder. It's your goal to identify the person, place, and weapon used before you run out of time and the murderer escapes.^^To move around, you can enter the direction you want to go: north, south, east, west, northwest, northeast, southwest, southeast, up, or down. You can abbreviate any of these directions with their common abbreviations: n, s, e, w, ne, sw, etc.^^When you see people and objects in rooms, you can look at them by typing 'look at <person>' or 'look at <object>. For example: 'look at Colonel Mustard' or 'look at silver candlestick'. You may also 'investigate' or 'look around' a room and 'look at' or 'examine' its furniture and decor. You may even find it useful to look under, behind, and inside certain objects.^^You may abbreviate the word 'look' as 'l'. Many people and object names can also be shortened. In the example above, for example, you could type 'l at Mustard', 'l at candlestick' , or even 'l at silver'.~]
+    ParaContent(); print "In each game, one person, weapon, and room offer a clue that they were involved in the murder. It's your goal to identify the person, place, and weapon used before you run out of time and the murderer escapes.^^To move around, you can enter the direction you want to go: north, south, east, west, northwest, northeast, southwest, southeast, up, or down. You can abbreviate any of these directions with their common abbreviations: n, s, e, w, ne, sw, etc.^^When you see people and objects in rooms, you can look at them by typing ~look at <person>~ or ~look at <object>. For example: ~look at Colonel Mustard~ or ~look at silver candlestick~. You may also ~investigate~ or ~look around~ a room and ~look at~ or ~examine~ its furniture and decor. You may even find it useful to look under, behind, and inside certain objects.^^You may abbreviate the word ~look~ as ~l~. Many people and object names can also be shortened. In the example above, for example, you could type ~l at Mustard~, ~l at candlestick~ , or even ~l at silver~."; new_line; .L_Say316; .L_SayX316;} else if (debug_rules > 1) DB_Rule(R_818, 818, 'actor');
     rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -21846,27 +21886,32 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ;
     if (actor == player) {
     if (debug_rules) DB_Rule(R_830, 830);
-    ! [2: say ~The crimescene is the [bold type][crimescene][roman type]. The murderer is [bold type][murderer][roman type]. The murder weapon is the [bold type][murder weapon][roman type].[line break][line break]~]
+    ! [2: say ~The crimescene is the [bold type][crimescene][roman type].[line break]The murderer is [bold type][murderer][roman type].[line break]The murder weapon is the [bold type][murder weapon][roman type].[line break][line break]~]
     say__p=1;! [3: ~The crimescene is the ~]
     ParaContent(); print "The crimescene is the ";! [4: bold type]
     ParaContent(); style bold;! [5: crimescene]
     ParaContent(); PrintShortName((Global_Vars-->11));! [6: roman type]
-    ParaContent(); style roman;! [7: ~. The murderer is ~]
-    ParaContent(); print ". The murderer is ";! [8: bold type]
-    ParaContent(); style bold;! [9: murderer]
-    ParaContent(); PrintShortName((Global_Vars-->12));! [10: roman type]
-    ParaContent(); style roman;! [11: ~. The murder weapon is the ~]
-    ParaContent(); print ". The murder weapon is the ";! [12: bold type]
-    ParaContent(); style bold;! [13: murder weapon]
-    ParaContent(); PrintShortName((Global_Vars-->13));! [14: roman type]
-    ParaContent(); style roman;! [15: ~.~]
-    ParaContent(); print ".";! [16: line break]
-    ParaContent(); new_line;! [17: line break]
-    ParaContent(); new_line; .L_Say317; .L_SayX317;! [18: repeat with cs running through debuglist]
+    ParaContent(); style roman;! [7: ~.~]
+    ParaContent(); print ".";! [8: line break]
+    ParaContent(); new_line;! [9: ~The murderer is ~]
+    ParaContent(); print "The murderer is ";! [10: bold type]
+    ParaContent(); style bold;! [11: murderer]
+    ParaContent(); PrintShortName((Global_Vars-->12));! [12: roman type]
+    ParaContent(); style roman;! [13: ~.~]
+    ParaContent(); print ".";! [14: line break]
+    ParaContent(); new_line;! [15: ~The murder weapon is the ~]
+    ParaContent(); print "The murder weapon is the ";! [16: bold type]
+    ParaContent(); style bold;! [17: murder weapon]
+    ParaContent(); PrintShortName((Global_Vars-->13));! [18: roman type]
+    ParaContent(); style roman;! [19: ~.~]
+    ParaContent(); print ".";! [20: line break]
+    ParaContent(); new_line;! [21: line break]
+    ParaContent(); new_line; .L_Say317; .L_SayX317;! [22: repeat with dl running through debug list]
     for (tmp_2=(Global_Vars-->10), tmp_1=1, tmp_0 = BlkValueCreate(TEXT_TY), BlkValueCopyAZ(tmp_0, LIST_OF_TY_GetItem(tmp_2, tmp_1, true)): tmp_1<=LIST_OF_TY_GetLength(tmp_2): tmp_1++, BlkValueCopyAZ(tmp_0, LIST_OF_TY_GetItem(tmp_2, tmp_1, true)))
-    {! [19: say ~[cs][line break]~]
-        say__p=1;! [20: cs]
-        ParaContent(); print (TEXT_TY_Say) tmp_0;! [21: line break]
+    {! [23: say ~[dl].[line break]~]
+        say__p=1;! [24: dl]
+        ParaContent(); print (TEXT_TY_Say) tmp_0;! [25: ~.~]
+        ParaContent(); print ".";! [26: line break]
         ParaContent(); new_line; .L_Say318; .L_SayX318;}
         BlkValueFree(tmp_0);
         } else if (debug_rules > 1) DB_Rule(R_830, 830, 'actor');
@@ -30980,7 +31025,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 98 + 32;
+Constant MAX_ROUTE_LENGTH = 100 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -32510,7 +32555,7 @@ Array RulebookNames -->
         if (R == R_799) { print "Instead of examining the crimescene"; rtrue; } ! rule 348
         if (R == R_800) { print "When play begins"; rtrue; } ! rule 349
         if (R == R_801) { print "Instead of looking under a thing which is underlaid by something ( called the lost object )"; rtrue; } ! rule 350
-        if (R == R_802) { print "Instead of going north in the Hall"; rtrue; } ! rule 351
+        if (R == R_802) { print "Instead of going north in the hall"; rtrue; } ! rule 351
         if (R == R_803) { print "Before examining in assortment of potted plants"; rtrue; } ! rule 352
         if (R == R_804) { print "Carry out going by name"; rtrue; } ! rule 353
         if (R == R_805) { print "Check going by name"; rtrue; } ! rule 354
@@ -52479,16 +52524,6 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
                 while (WordInProperty(NextWordStopped(), self, name)) f = true;
                 wn--; try_from_wn = wn;
             }
-                if (NextWordStopped() ~= 'the') jump Fail_1;
-                if (NextWordStopped() ~= 'pool') jump Fail_1;
-                if (NextWordStopped() ~= 'room') jump Fail_1;
-                try_from_wn = wn; f = true; continue;
-                .Fail_1; wn = try_from_wn;
-                if (NextWordStopped() ~= 'the') jump Fail_2;
-                if (NextWordStopped() ~= 'game') jump Fail_2;
-                if (NextWordStopped() ~= 'room') jump Fail_2;
-                try_from_wn = wn; f = true; continue;
-                .Fail_2; wn = try_from_wn;
             break;
         } ! End of endless loop
         while (WordInProperty(NextWordStopped(), self, name)) n++;
@@ -52543,10 +52578,6 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
                 while (WordInProperty(NextWordStopped(), self, name)) f = true;
                 wn--; try_from_wn = wn;
             }
-                if (NextWordStopped() ~= 'pool') jump Fail_1;
-                if (NextWordStopped() ~= 'table') jump Fail_1;
-                try_from_wn = wn; f = true; continue;
-                .Fail_1; wn = try_from_wn;
             break;
         } ! End of endless loop
         while (WordInProperty(NextWordStopped(), self, name)) n++;
@@ -52601,6 +52632,16 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
                 while (WordInProperty(NextWordStopped(), self, name)) f = true;
                 wn--; try_from_wn = wn;
             }
+                if (NextWordStopped() ~= 'the') jump Fail_1;
+                if (NextWordStopped() ~= 'pool') jump Fail_1;
+                if (NextWordStopped() ~= 'room') jump Fail_1;
+                try_from_wn = wn; f = true; continue;
+                .Fail_1; wn = try_from_wn;
+                if (NextWordStopped() ~= 'the') jump Fail_2;
+                if (NextWordStopped() ~= 'game') jump Fail_2;
+                if (NextWordStopped() ~= 'room') jump Fail_2;
+                try_from_wn = wn; f = true; continue;
+                .Fail_2; wn = try_from_wn;
             break;
         } ! End of endless loop
         while (WordInProperty(NextWordStopped(), self, name)) n++;
@@ -52655,6 +52696,10 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
                 while (WordInProperty(NextWordStopped(), self, name)) f = true;
                 wn--; try_from_wn = wn;
             }
+                if (NextWordStopped() ~= 'pool') jump Fail_1;
+                if (NextWordStopped() ~= 'table') jump Fail_1;
+                try_from_wn = wn; f = true; continue;
+                .Fail_1; wn = try_from_wn;
             break;
         } ! End of endless loop
         while (WordInProperty(NextWordStopped(), self, name)) n++;
@@ -52781,7 +52826,115 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Consult_Grammar_104 
+[ Parse_Name_GV100 
+    original_wn ! first word of text parsed
+    group_wn ! first word matched against A/B/C/... disjunction
+    try_from_wn ! position to try matching from
+    n ! number of words matched
+    f ! flag: sufficiently good match found to justify success
+    w ! for use by individual grammar lines
+    rv ! for use by individual grammar lines
+    g ! temporary: success flag for parsing visibles
+    ss ! temporary: saves 'self' in distinguishing visibles
+    spn ! temporary: saves 'parsed_number' in parsing visibles
+    pass ! pass counter (1 to 3)
+    pass1_n ! value of n recorded during pass 1
+    pass2_n ! value of n recorded during pass 2
+    ;
+    #ifdef DEBUG;
+    if (parser_trace >= 3) print "Parse_name called^";
+    #endif;
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    #ifdef DEBUG;
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    #endif;
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ Parse_Name_GV101 
+    original_wn ! first word of text parsed
+    group_wn ! first word matched against A/B/C/... disjunction
+    try_from_wn ! position to try matching from
+    n ! number of words matched
+    f ! flag: sufficiently good match found to justify success
+    w ! for use by individual grammar lines
+    rv ! for use by individual grammar lines
+    g ! temporary: success flag for parsing visibles
+    ss ! temporary: saves 'self' in distinguishing visibles
+    spn ! temporary: saves 'parsed_number' in parsing visibles
+    pass ! pass counter (1 to 3)
+    pass1_n ! value of n recorded during pass 1
+    pass2_n ! value of n recorded during pass 2
+    ;
+    #ifdef DEBUG;
+    if (parser_trace >= 3) print "Parse_name called^";
+    #endif;
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    #ifdef DEBUG;
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    #endif;
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ Consult_Grammar_106 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52801,7 +52954,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_105 
+[ Consult_Grammar_107 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52821,7 +52974,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_106 
+[ Consult_Grammar_108 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52841,7 +52994,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_107 
+[ Consult_Grammar_109 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52861,7 +53014,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_108 
+[ Consult_Grammar_110 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52881,7 +53034,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_109 
+[ Consult_Grammar_111 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52901,7 +53054,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_110 
+[ Consult_Grammar_112 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -52921,7 +53074,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_111 
+[ Consult_Grammar_113 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -53300,169 +53453,171 @@ Verb 'debug'
 
 
 
-Constant TX_PS_112 = "4 cue sticks";
-Constant TX_PS_164 = "> ";
-Array TX_L_164 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_164;
-Constant TX_PS_157 = ">";
-Constant TX_PS_146 = "A big gun for doing a lot of damage.";
-Constant TX_PS_110 = "A billiard table is the centerpiece of the billiard room, its green surface slightly discolored with age. You also see a blue armchair and a rack of cue sticks.^^The library is to the north, the ballroom is to the east, the conservatory is to the south.";
-Constant TX_PS_101 = "A dining room table, a sideboard, dining room chairs, a small green sofa, a painting, and a china cabinet are here.^^The hall is to your northwest, the ballroom is to your southwest, the lounge is to your north, and the kitchen is to the south.";
-Constant TX_PS_142 = "A formidable kitchen knife, recently sharpened.";
-Constant TX_PS_152 = "A heavy wrench for removing bolts.";
-Constant TX_PS_156 = "A heavy-duty pipe.";
-Constant TX_PS_140 = "A knife just like the one you had in Scouts.";
-Constant TX_PS_150 = "A length of surprisingly strong fabric for tying back heavy curtains.";
-Constant TX_PS_79 = "A piano, a red sofa, a curved purple sofa, two high-backed chairs, a curio cabinet, and wall sconces are in the ballroom.^^The billiard room is to the northwest, the hall is to the north, the dining room is to the northeast, the conservatory is to the southwest, and the kitchen is to the southeast.";
-Constant TX_PS_144 = "A purse-sized pistol.";
-Constant TX_PS_138 = "A solid candlestick, perfect for entertaining.";
-Constant TX_PS_148 = "A thin, but sturdy rope.";
-Constant TX_PS_94 = "A well-used table";
+Constant TX_PS_114 = "4 cue sticks";
+Constant TX_PS_166 = "> ";
+Array TX_L_166 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_166;
+Constant TX_PS_159 = ">";
+Constant TX_PS_148 = "A big gun for doing a lot of damage.";
+Constant TX_PS_112 = "A billiard table is the centerpiece of the billiard room, its green surface slightly discolored with age. You also see a blue armchair and a rack of cue sticks.^^The library is to the north, the ballroom is to the east, the conservatory is to the south.";
+Constant TX_PS_103 = "A dining room table, a sideboard, dining room chairs, a small green sofa, a painting, and a china cabinet are here.^^The hall is to your northwest, the ballroom is to your southwest, the lounge is to your north, and the kitchen is to the south.";
+Constant TX_PS_144 = "A formidable kitchen knife, recently sharpened.";
+Constant TX_PS_154 = "A heavy wrench for removing bolts.";
+Constant TX_PS_158 = "A heavy-duty pipe.";
+Constant TX_PS_142 = "A knife just like the one you had in Scouts.";
+Constant TX_PS_152 = "A length of surprisingly strong fabric for tying back heavy curtains.";
+Constant TX_PS_80 = "A piano, a red sofa, a curved purple sofa, two high-backed chairs, a curio cabinet, and wall sconces are in the ballroom.^^The billiard room is to the northwest, the hall is to the north, the dining room is to the northeast, the conservatory is to the southwest, and the kitchen is to the southeast.";
+Constant TX_PS_146 = "A purse-sized pistol.";
+Constant TX_PS_140 = "A solid candlestick, perfect for entertaining.";
+Constant TX_PS_150 = "A thin, but sturdy rope.";
+Constant TX_PS_95 = "A well-used table";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_40 = "As good-looking as ever.";
-Constant TX_PS_78 = "Ballroom";
-Constant TX_PS_109 = "Billiard Room";
-Constant TX_PS_64 = "Book shelves";
-Constant TX_PS_91 = "Bookcases";
+Constant TX_PS_65 = "Book shelves";
+Constant TX_PS_92 = "Bookcases";
 Constant TX_PS_53 = "Candles";
 Constant TX_PS_55 = "Chairs";
 Constant TX_PS_2 = "Clue";
-Constant TX_PS_129 = "Colonel Mustard";
-Constant TX_PS_123 = "Conservatory";
-Constant TX_PS_105 = "Dining room chairs";
-Constant TX_PS_100 = "Dining room";
+Constant TX_PS_131 = "Colonel Mustard";
+Constant TX_PS_125 = "Conservatory";
+Constant TX_PS_107 = "Dining room chairs";
 Constant TX_PS_42 = "Entryway";
-Constant TX_PS_158 = "Fiction";
+Constant TX_PS_160 = "Fiction";
 Constant TX_PS_44 = "Hall";
 Constant TX_PS_58 = "In the center of the dimly lit study is a large wood desk with an ornate armchair. Another armchair sits against the wall. There are several paintings adorning the wall. Someone has lit a fire, which is still smoldering, in the fireplace. Books line shelves along the north and east walls. A rich green carpet, tattered in places, covers the floorboards.^^The hall is to your east, and the library is to your south.";
-Constant TX_PS_89 = "In thr library you see bookcases, a green-tinted lamp, a hard dark brown chair, A well-used table, a roaring fireplace, a threadbare armchair, a rumpled couch, a solid wood bench, and a stool.^^The study is to your north, the hall is to your east, and the billiard room is to your south.";
-Constant TX_PS_136 = "It could use a little polish.";
-Constant TX_PS_117 = "Kitchen";
-Constant TX_PS_88 = "Library";
-Constant TX_PS_67 = "Lounge";
-Constant TX_PS_132 = "Miss Scarlet";
-Constant TX_PS_131 = "Mr Green";
-Constant TX_PS_133 = "Mrs White";
-Constant TX_PS_134 = "Ms Peacock";
-Constant TX_PS_66 = "Paintings";
-Constant TX_PS_130 = "Professor Plum";
-Constant TX_PS_162 = "QUIT";
+Constant TX_PS_90 = "In the library you see bookcases, a green-tinted lamp, a hard dark brown chair, A well-used table, a roaring fireplace, a threadbare armchair, a rumpled couch, a solid wood bench, and a stool.^^The study is to your north, the hall is to your east, and the billiard room is to your south.";
+Constant TX_PS_138 = "It could use a little polish.";
+Constant TX_PS_134 = "Miss Scarlet";
+Constant TX_PS_133 = "Mr Green";
+Constant TX_PS_135 = "Mrs White";
+Constant TX_PS_136 = "Ms Peacock";
+Constant TX_PS_67 = "Paintings";
+Constant TX_PS_132 = "Professor Plum";
+Constant TX_PS_164 = "QUIT";
 Constant TX_PS_46 = "Queen Anne armchair";
-Constant TX_PS_159 = "RESTART";
-Constant TX_PS_160 = "RESTORE a saved game";
-Constant TX_PS_116 = "Stools";
-Constant TX_PS_57 = "Study";
-Constant TX_PS_124 = "The conservatory is home to a wide variety of potted plants of all sizes. The heat and humidity are high to keep some of the more exotic species comfortable. Two entire walls of the conservatory are windowed. A utility closet and sink sit on opposite corners of the room, and a yellow bench rests against the windows of one wall.^^The ballroom is to the east. The billiard room is to the north.";
+Constant TX_PS_161 = "RESTART";
+Constant TX_PS_162 = "RESTORE a saved game";
+Constant TX_PS_118 = "Stools";
+Constant TX_PS_126 = "The conservatory is home to a wide variety of potted plants of all sizes. The heat and humidity are high to keep some of the more exotic species comfortable. Two entire walls of the conservatory are windowed. A utility closet and sink sit on opposite corners of the room, and a yellow bench rests against the windows of one wall.^^The ballroom is to the east. The billiard room is to the north.";
 Constant TX_PS_45 = "The hall is a great central room in the mansion. You can see a wooden side table holding a bowl of fruit, flanked with chairs. On another table is a vase containing flowers. Beside it sits a Queen Anne armchair. A golden mirror hangs on a wall. A massive Persian rug is in the middle of the room.^^The study is to your northwest, the lounge is to your northeast, the ballroom is to your south, the library is to your southwest, and the dining room is to your southeast.";
-Constant TX_PS_68 = "The lounge is a comfortable place to sit and chat. The centerpiece is a long, comfortable sofa.^^The hall is to your west, and the dining room is to your south.";
-Constant TX_PS_154 = "The perfect tool for fixing the plumbing.";
-Constant TX_PS_84 = "Two high-backed chairs";
-Constant TX_PS_163 = "UNDO the last command";
-Constant TX_PS_87 = "Wall sconces";
+Constant TX_PS_69 = "The lounge is a comfortable place to sit and chat. The centerpiece is a long, comfortable sofa.^^The hall is to your west, and the dining room is to your south.";
+Constant TX_PS_156 = "The perfect tool for fixing the plumbing.";
+Constant TX_PS_85 = "Two high-backed chairs";
+Constant TX_PS_165 = "UNDO the last command";
+Constant TX_PS_88 = "Wall sconces";
 Constant TX_PS_43 = "Welcome to Clue! Your name is Detective Black. You are investigating a murder in the Mystery Mansion. You can move around the mansion, find suspects, the murder weapon (as well as some red herrings), and the scene of the crime. Once you've deduced the murder weapon, murderer, and room where the murder took place, you win! Just don't run out of time...^^If you need help, type ~help~.^^The hall is to your south.";
-Constant TX_PS_118 = "You see a kitchen table, a cupboard, and a granite countertop. An industrial refrigerator looms over the room. The dining room is to the north, the ballroom is to the west.";
+Constant TX_PS_120 = "You see a kitchen table, a cupboard, and a granite countertop. An industrial refrigerator looms over the room. The dining room is to the north, the ballroom is to the west.";
 Constant TX_PS_41 = "Yourself";
 Constant TX_PS_9 = "animals";
-Constant TX_PS_125 = "assortment of potted plants";
+Constant TX_PS_127 = "assortment of potted plants";
 Constant TX_PS_14 = "backdrops";
-Constant TX_PS_111 = "billiard table";
-Constant TX_PS_69 = "blond wood table";
-Constant TX_PS_113 = "blue upholstered armchair";
-Constant TX_PS_63 = "book shelves";
-Constant TX_PS_90 = "bookcases";
+Constant TX_PS_79 = "ballroom";
+Constant TX_PS_111 = "billiard room";
+Constant TX_PS_113 = "billiard table";
+Constant TX_PS_70 = "blond wood table";
+Constant TX_PS_115 = "blue upholstered armchair";
+Constant TX_PS_64 = "book shelves";
+Constant TX_PS_91 = "bookcases";
 Constant TX_PS_47 = "bowl of fruit";
-Constant TX_PS_149 = "braided curtain tie";
-Constant TX_PS_77 = "brass lamp";
-Constant TX_PS_137 = "bronze candlestick";
-Constant TX_PS_141 = "butcher knife";
+Constant TX_PS_151 = "braided curtain tie";
+Constant TX_PS_78 = "brass lamp";
+Constant TX_PS_139 = "bronze candlestick";
+Constant TX_PS_143 = "butcher knife";
 Constant TX_PS_52 = "candles";
 Constant TX_PS_23 = "candlesticks";
 Constant TX_PS_54 = "chairs";
-Constant TX_PS_108 = "china cabinet";
-Constant TX_PS_71 = "comfortable sofa";
+Constant TX_PS_110 = "china cabinet";
+Constant TX_PS_72 = "comfortable sofa";
 Constant TX_PS_11 = "containers";
-Constant TX_PS_122 = "countertop";
+Constant TX_PS_124 = "countertop";
 Constant TX_PS_16 = "coverers";
-Constant TX_PS_76 = "cupboard";
-Constant TX_PS_85 = "curio cabinet";
-Constant TX_PS_82 = "curved purple sofa";
-Constant TX_PS_72 = "cushioned bench";
+Constant TX_PS_77 = "cupboard";
+Constant TX_PS_86 = "curio cabinet";
+Constant TX_PS_83 = "curved purple sofa";
+Constant TX_PS_73 = "cushioned bench";
 Constant TX_PS_15 = "devices";
-Constant TX_PS_104 = "dining room chairs";
-Constant TX_PS_102 = "dining room table";
+Constant TX_PS_106 = "dining room chairs";
+Constant TX_PS_104 = "dining room table";
+Constant TX_PS_102 = "dining room";
 Constant TX_PS_25 = "directions";
 Constant TX_PS_10 = "doors";
 Constant TX_PS_36 = "down";
-Constant TX_PS_135 = "dull silver candlestick";
+Constant TX_PS_137 = "dull silver candlestick";
 Constant TX_PS_56 = "dusty wood table";
 Constant TX_PS_33 = "east";
 Constant TX_PS_61 = "fireplace";
-Constant TX_PS_92 = "green-tinted lamp";
-Constant TX_PS_93 = "hard dark brown chair";
-Constant TX_PS_145 = "heavy gray handgun";
+Constant TX_PS_93 = "green-tinted lamp";
+Constant TX_PS_94 = "hard dark brown chair";
+Constant TX_PS_147 = "heavy gray handgun";
 Constant TX_PS_37 = "inside";
-Constant TX_PS_120 = "kitchen cupboard";
-Constant TX_PS_119 = "kitchen table";
+Constant TX_PS_122 = "kitchen cupboard";
+Constant TX_PS_121 = "kitchen table";
+Constant TX_PS_119 = "kitchen";
 Constant TX_PS_18 = "knives";
 Constant TX_PS_60 = "lavish desk";
-Constant TX_PS_155 = "lead pipe";
-Constant TX_PS_151 = "lugwrench";
+Constant TX_PS_157 = "lead pipe";
+Constant TX_PS_89 = "library";
+Constant TX_PS_68 = "lounge";
+Constant TX_PS_153 = "lugwrench";
+Constant TX_PS_62 = "marble mantlepiece";
 Constant TX_PS_7 = "men";
 Constant TX_PS_50 = "mirror";
 Constant TX_PS_26 = "north";
 Constant TX_PS_28 = "northeast";
 Constant TX_PS_29 = "northwest";
-Constant TX_PS_70 = "oak armchair";
+Constant TX_PS_71 = "oak armchair";
 Constant TX_PS_59 = "ornate armchair";
 Constant TX_PS_38 = "outside";
-Constant TX_PS_107 = "painting";
-Constant TX_PS_65 = "paintings";
+Constant TX_PS_109 = "painting";
+Constant TX_PS_66 = "paintings";
 Constant TX_PS_6 = "people";
-Constant TX_PS_80 = "piano";
-Constant TX_PS_153 = "pipe wrench";
+Constant TX_PS_81 = "piano";
+Constant TX_PS_155 = "pipe wrench";
 Constant TX_PS_19 = "pipes";
 Constant TX_PS_13 = "player's holdalls";
-Constant TX_PS_139 = "pocket knife";
-Constant TX_PS_81 = "red sofa";
-Constant TX_PS_121 = "refrigerator";
+Constant TX_PS_141 = "pocket knife";
+Constant TX_PS_82 = "red sofa";
+Constant TX_PS_123 = "refrigerator";
 Constant TX_PS_24 = "regions";
 Constant TX_PS_21 = "revolvers";
-Constant TX_PS_62 = "rich green carpet";
-Constant TX_PS_95 = "roaring fireplace";
+Constant TX_PS_63 = "rich green carpet";
+Constant TX_PS_96 = "roaring fireplace";
 Constant TX_PS_22 = "ropes";
 Constant TX_PS_51 = "rug";
-Constant TX_PS_97 = "rumpled couch";
-Constant TX_PS_161 = "see some suggestions for AMUSING things to do";
-Constant TX_PS_75 = "side chair";
-Constant TX_PS_103 = "sideboard";
-Constant TX_PS_73 = "silver mirror";
-Constant TX_PS_127 = "sink";
-Constant TX_PS_106 = "small green sofa";
-Constant TX_PS_143 = "small pistol";
-Constant TX_PS_98 = "solid wood bench";
+Constant TX_PS_99 = "rumpled couch";
+Constant TX_PS_163 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_76 = "side chair";
+Constant TX_PS_105 = "sideboard";
+Constant TX_PS_74 = "silver mirror";
+Constant TX_PS_129 = "sink";
+Constant TX_PS_108 = "small green sofa";
+Constant TX_PS_145 = "small pistol";
+Constant TX_PS_100 = "solid wood bench";
 Constant TX_PS_30 = "south";
 Constant TX_PS_31 = "southeast";
 Constant TX_PS_32 = "southwest";
-Constant TX_PS_74 = "stained glass lamp";
-Constant TX_PS_99 = "stool";
-Constant TX_PS_115 = "stools";
+Constant TX_PS_75 = "stained glass lamp";
+Constant TX_PS_97 = "stone mantlepiece";
+Constant TX_PS_101 = "stool";
+Constant TX_PS_117 = "stools";
+Constant TX_PS_57 = "study";
 Constant TX_PS_5 = "supporters";
 Constant TX_PS_4 = "the Andersons";
 Constant TX_PS_27 = "the";
-Constant TX_PS_147 = "thin rope";
-Constant TX_PS_96 = "threadbare armchair";
-Constant TX_PS_83 = "two high-backed chairs";
+Constant TX_PS_149 = "thin rope";
+Constant TX_PS_98 = "threadbare armchair";
+Constant TX_PS_84 = "two high-backed chairs";
 Constant TX_PS_35 = "up";
-Constant TX_PS_126 = "utility closet";
+Constant TX_PS_128 = "utility closet";
 Constant TX_PS_49 = "vase of flowers";
 Constant TX_PS_12 = "vehicles";
-Constant TX_PS_86 = "wall sconces";
+Constant TX_PS_87 = "wall sconces";
 Constant TX_PS_17 = "weapons";
 Constant TX_PS_34 = "west";
-Constant TX_PS_114 = "wet bar";
+Constant TX_PS_116 = "wet bar";
 Constant TX_PS_8 = "women";
 Constant TX_PS_48 = "wooden side table";
 Constant TX_PS_20 = "wrenches";
-Constant TX_PS_128 = "yellow bench";
+Constant TX_PS_130 = "yellow bench";
 Constant TX_PS_39 = "yourself";
 Array TX_L_39 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_39;
 
@@ -60932,38 +61087,38 @@ Array BC_285 --> PACKED_TEXT_STORAGE TX_PS_62;
 Array BC_286 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_287 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_288 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_289 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_289 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_290 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_291 --> PACKED_TEXT_STORAGE TX_PS_63;
-Array BC_292 --> PACKED_TEXT_STORAGE TX_PS_64;
+Array BC_292 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_293 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_294 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_295 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_296 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_297 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_64;
 Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_65;
-Array BC_299 --> PACKED_TEXT_STORAGE TX_PS_66;
+Array BC_299 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_300 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_301 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_302 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_303 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_304 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_304 --> PACKED_TEXT_STORAGE TX_PS_66;
 Array BC_305 --> PACKED_TEXT_STORAGE TX_PS_67;
-Array BC_306 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_306 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_307 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_308 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_309 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_310 --> PACKED_TEXT_STORAGE TX_PS_69;
-Array BC_311 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_312 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_310 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_311 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_312 --> PACKED_TEXT_STORAGE TX_PS_69;
 Array BC_313 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_314 --> PACKED_TEXT_STORAGE TX_PS_5;
+Array BC_314 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_315 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_316 --> PACKED_TEXT_STORAGE TX_PS_70;
 Array BC_317 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_318 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_319 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_320 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_320 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_321 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_322 --> PACKED_TEXT_STORAGE TX_PS_71;
 Array BC_323 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -60981,7 +61136,7 @@ Array BC_334 --> PACKED_TEXT_STORAGE TX_PS_73;
 Array BC_335 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_336 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_337 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_338 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_338 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_339 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_340 --> PACKED_TEXT_STORAGE TX_PS_74;
 Array BC_341 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -61008,15 +61163,15 @@ Array BC_361 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_362 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_363 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_364 --> PACKED_TEXT_STORAGE TX_PS_78;
-Array BC_365 --> PACKED_TEXT_STORAGE TX_PS_79;
+Array BC_365 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_366 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_367 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_368 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_369 --> PACKED_TEXT_STORAGE TX_PS_80;
-Array BC_370 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_371 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_369 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_370 --> PACKED_TEXT_STORAGE TX_PS_79;
+Array BC_371 --> PACKED_TEXT_STORAGE TX_PS_80;
 Array BC_372 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_373 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_373 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_374 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_375 --> PACKED_TEXT_STORAGE TX_PS_81;
 Array BC_376 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -61031,60 +61186,60 @@ Array BC_384 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_385 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_386 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_387 --> PACKED_TEXT_STORAGE TX_PS_83;
-Array BC_388 --> PACKED_TEXT_STORAGE TX_PS_84;
+Array BC_388 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_389 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_390 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_391 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_391 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_392 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_393 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_393 --> PACKED_TEXT_STORAGE TX_PS_84;
 Array BC_394 --> PACKED_TEXT_STORAGE TX_PS_85;
 Array BC_395 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_396 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_397 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_398 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_398 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_399 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_400 --> PACKED_TEXT_STORAGE TX_PS_86;
-Array BC_401 --> PACKED_TEXT_STORAGE TX_PS_87;
+Array BC_401 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_402 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_403 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_404 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_404 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_405 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_406 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_406 --> PACKED_TEXT_STORAGE TX_PS_87;
 Array BC_407 --> PACKED_TEXT_STORAGE TX_PS_88;
-Array BC_408 --> PACKED_TEXT_STORAGE TX_PS_89;
+Array BC_408 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_409 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_410 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_411 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_412 --> PACKED_TEXT_STORAGE TX_PS_90;
-Array BC_413 --> PACKED_TEXT_STORAGE TX_PS_91;
-Array BC_414 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_412 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_413 --> PACKED_TEXT_STORAGE TX_PS_89;
+Array BC_414 --> PACKED_TEXT_STORAGE TX_PS_90;
 Array BC_415 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_416 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_417 --> PACKED_TEXT_STORAGE TX_PS_5;
-Array BC_418 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_417 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_418 --> PACKED_TEXT_STORAGE TX_PS_91;
 Array BC_419 --> PACKED_TEXT_STORAGE TX_PS_92;
 Array BC_420 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_421 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_422 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_423 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_423 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_424 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_425 --> PACKED_TEXT_STORAGE TX_PS_93;
 Array BC_426 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_427 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_428 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_429 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_429 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_430 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_431 --> PACKED_TEXT_STORAGE TX_PS_94;
 Array BC_432 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_433 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_434 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_435 --> PACKED_TEXT_STORAGE TX_PS_5;
+Array BC_435 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_436 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_437 --> PACKED_TEXT_STORAGE TX_PS_95;
 Array BC_438 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_439 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_440 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_441 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_441 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_442 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_443 --> PACKED_TEXT_STORAGE TX_PS_96;
 Array BC_444 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -61096,7 +61251,7 @@ Array BC_449 --> PACKED_TEXT_STORAGE TX_PS_97;
 Array BC_450 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_451 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_452 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_453 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_453 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_454 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_455 --> PACKED_TEXT_STORAGE TX_PS_98;
 Array BC_456 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -61108,38 +61263,38 @@ Array BC_461 --> PACKED_TEXT_STORAGE TX_PS_99;
 Array BC_462 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_463 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_464 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_465 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_465 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_466 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_467 --> PACKED_TEXT_STORAGE TX_PS_100;
-Array BC_468 --> PACKED_TEXT_STORAGE TX_PS_101;
+Array BC_468 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_469 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_470 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_471 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_472 --> PACKED_TEXT_STORAGE TX_PS_102;
-Array BC_473 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_472 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_473 --> PACKED_TEXT_STORAGE TX_PS_101;
 Array BC_474 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_475 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_476 --> PACKED_TEXT_STORAGE TX_PS_5;
+Array BC_476 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_477 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_478 --> PACKED_TEXT_STORAGE TX_PS_103;
-Array BC_479 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_480 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_478 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_479 --> PACKED_TEXT_STORAGE TX_PS_102;
+Array BC_480 --> PACKED_TEXT_STORAGE TX_PS_103;
 Array BC_481 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_482 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_482 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_483 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_484 --> PACKED_TEXT_STORAGE TX_PS_104;
-Array BC_485 --> PACKED_TEXT_STORAGE TX_PS_105;
+Array BC_485 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_486 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_487 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_488 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_488 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_489 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_490 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_491 --> PACKED_TEXT_STORAGE TX_PS_106;
+Array BC_490 --> PACKED_TEXT_STORAGE TX_PS_105;
+Array BC_491 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_492 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_493 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_494 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_494 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_495 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_496 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_496 --> PACKED_TEXT_STORAGE TX_PS_106;
 Array BC_497 --> PACKED_TEXT_STORAGE TX_PS_107;
 Array BC_498 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_499 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -61150,22 +61305,22 @@ Array BC_503 --> PACKED_TEXT_STORAGE TX_PS_108;
 Array BC_504 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_505 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_506 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_507 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_507 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_508 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_509 --> PACKED_TEXT_STORAGE TX_PS_109;
-Array BC_510 --> PACKED_TEXT_STORAGE TX_PS_110;
+Array BC_510 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_511 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_512 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_513 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_514 --> PACKED_TEXT_STORAGE TX_PS_111;
-Array BC_515 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_514 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_515 --> PACKED_TEXT_STORAGE TX_PS_110;
 Array BC_516 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_517 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_518 --> PACKED_TEXT_STORAGE TX_PS_5;
-Array BC_519 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_520 --> PACKED_TEXT_STORAGE TX_PS_112;
-Array BC_521 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_522 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_518 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_519 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_520 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_521 --> PACKED_TEXT_STORAGE TX_PS_111;
+Array BC_522 --> PACKED_TEXT_STORAGE TX_PS_112;
 Array BC_523 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_524 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_525 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -61173,7 +61328,7 @@ Array BC_526 --> PACKED_TEXT_STORAGE TX_PS_113;
 Array BC_527 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_528 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_529 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_530 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_530 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_531 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_532 --> PACKED_TEXT_STORAGE TX_PS_114;
 Array BC_533 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
@@ -61182,183 +61337,195 @@ Array BC_535 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_536 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_537 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_538 --> PACKED_TEXT_STORAGE TX_PS_115;
-Array BC_539 --> PACKED_TEXT_STORAGE TX_PS_116;
+Array BC_539 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_540 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_541 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_542 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_543 --> PACKED_TEXT_STORAGE TX_PS_16;
-Array BC_544 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_545 --> PACKED_TEXT_STORAGE TX_PS_117;
-Array BC_546 --> PACKED_TEXT_STORAGE TX_PS_118;
+Array BC_542 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_543 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_544 --> PACKED_TEXT_STORAGE TX_PS_116;
+Array BC_545 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_546 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_547 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_548 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_549 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_550 --> PACKED_TEXT_STORAGE TX_PS_119;
-Array BC_551 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_550 --> PACKED_TEXT_STORAGE TX_PS_117;
+Array BC_551 --> PACKED_TEXT_STORAGE TX_PS_118;
 Array BC_552 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_553 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_554 --> PACKED_TEXT_STORAGE TX_PS_5;
-Array BC_555 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_556 --> PACKED_TEXT_STORAGE TX_PS_120;
-Array BC_557 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_558 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_554 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_555 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_556 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_557 --> PACKED_TEXT_STORAGE TX_PS_119;
+Array BC_558 --> PACKED_TEXT_STORAGE TX_PS_120;
 Array BC_559 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_560 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_560 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_561 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_562 --> PACKED_TEXT_STORAGE TX_PS_121;
 Array BC_563 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_564 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_565 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_566 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_566 --> PACKED_TEXT_STORAGE TX_PS_5;
 Array BC_567 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_568 --> PACKED_TEXT_STORAGE TX_PS_122;
 Array BC_569 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_570 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_571 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_572 --> PACKED_TEXT_STORAGE TX_PS_5;
+Array BC_572 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_573 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_574 --> PACKED_TEXT_STORAGE TX_PS_123;
-Array BC_575 --> PACKED_TEXT_STORAGE TX_PS_124;
+Array BC_575 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_576 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_577 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_578 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_579 --> PACKED_TEXT_STORAGE TX_PS_125;
-Array BC_580 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_578 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_579 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_580 --> PACKED_TEXT_STORAGE TX_PS_124;
 Array BC_581 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_582 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_583 --> PACKED_TEXT_STORAGE TX_PS_11;
-Array BC_584 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_585 --> PACKED_TEXT_STORAGE TX_PS_126;
-Array BC_586 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_587 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_583 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_584 --> PACKED_TEXT_STORAGE TX_PS_5;
+Array BC_585 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_586 --> PACKED_TEXT_STORAGE TX_PS_125;
+Array BC_587 --> PACKED_TEXT_STORAGE TX_PS_126;
 Array BC_588 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_589 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_589 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_590 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_591 --> PACKED_TEXT_STORAGE TX_PS_127;
 Array BC_592 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_593 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_594 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_595 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_595 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_596 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_597 --> PACKED_TEXT_STORAGE TX_PS_128;
 Array BC_598 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_599 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_600 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_601 --> PACKED_TEXT_STORAGE TX_PS_16;
+Array BC_601 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_602 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_603 --> PACKED_TEXT_STORAGE TX_PS_129;
-Array BC_604 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_134;
+Array BC_604 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_605 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_606 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_607 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_607 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_608 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_609 --> PACKED_TEXT_STORAGE TX_PS_130;
-Array BC_610 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_135;
+Array BC_610 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_611 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_612 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_613 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_613 --> PACKED_TEXT_STORAGE TX_PS_16;
 Array BC_614 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_615 --> PACKED_TEXT_STORAGE TX_PS_131;
-Array BC_616 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_136;
+Array BC_616 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_134;
 Array BC_617 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_618 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_619 --> PACKED_TEXT_STORAGE TX_PS_7;
 Array BC_620 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_621 --> PACKED_TEXT_STORAGE TX_PS_132;
-Array BC_622 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_137;
+Array BC_622 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_135;
 Array BC_623 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_624 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_625 --> PACKED_TEXT_STORAGE TX_PS_8;
+Array BC_625 --> PACKED_TEXT_STORAGE TX_PS_7;
 Array BC_626 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_627 --> PACKED_TEXT_STORAGE TX_PS_133;
-Array BC_628 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_138;
+Array BC_628 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_136;
 Array BC_629 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_630 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_631 --> PACKED_TEXT_STORAGE TX_PS_8;
+Array BC_631 --> PACKED_TEXT_STORAGE TX_PS_7;
 Array BC_632 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_633 --> PACKED_TEXT_STORAGE TX_PS_134;
-Array BC_634 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_139;
+Array BC_634 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_137;
 Array BC_635 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_636 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_637 --> PACKED_TEXT_STORAGE TX_PS_8;
 Array BC_638 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_639 --> PACKED_TEXT_STORAGE TX_PS_135;
-Array BC_640 --> PACKED_TEXT_STORAGE TX_PS_136;
+Array BC_640 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_138;
 Array BC_641 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_642 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_643 --> PACKED_TEXT_STORAGE TX_PS_23;
+Array BC_643 --> PACKED_TEXT_STORAGE TX_PS_8;
 Array BC_644 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_645 --> PACKED_TEXT_STORAGE TX_PS_137;
-Array BC_646 --> PACKED_TEXT_STORAGE TX_PS_138;
+Array BC_645 --> PACKED_TEXT_STORAGE TX_PS_136;
+Array BC_646 --> CONSTANT_PACKED_TEXT_STORAGE R_TX_S_139;
 Array BC_647 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_648 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_649 --> PACKED_TEXT_STORAGE TX_PS_23;
+Array BC_649 --> PACKED_TEXT_STORAGE TX_PS_8;
 Array BC_650 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_651 --> PACKED_TEXT_STORAGE TX_PS_139;
-Array BC_652 --> PACKED_TEXT_STORAGE TX_PS_140;
+Array BC_651 --> PACKED_TEXT_STORAGE TX_PS_137;
+Array BC_652 --> PACKED_TEXT_STORAGE TX_PS_138;
 Array BC_653 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_654 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_655 --> PACKED_TEXT_STORAGE TX_PS_18;
+Array BC_655 --> PACKED_TEXT_STORAGE TX_PS_23;
 Array BC_656 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_657 --> PACKED_TEXT_STORAGE TX_PS_141;
-Array BC_658 --> PACKED_TEXT_STORAGE TX_PS_142;
+Array BC_657 --> PACKED_TEXT_STORAGE TX_PS_139;
+Array BC_658 --> PACKED_TEXT_STORAGE TX_PS_140;
 Array BC_659 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_660 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_661 --> PACKED_TEXT_STORAGE TX_PS_18;
+Array BC_661 --> PACKED_TEXT_STORAGE TX_PS_23;
 Array BC_662 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_663 --> PACKED_TEXT_STORAGE TX_PS_143;
-Array BC_664 --> PACKED_TEXT_STORAGE TX_PS_144;
+Array BC_663 --> PACKED_TEXT_STORAGE TX_PS_141;
+Array BC_664 --> PACKED_TEXT_STORAGE TX_PS_142;
 Array BC_665 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_666 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_667 --> PACKED_TEXT_STORAGE TX_PS_21;
+Array BC_667 --> PACKED_TEXT_STORAGE TX_PS_18;
 Array BC_668 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_669 --> PACKED_TEXT_STORAGE TX_PS_145;
-Array BC_670 --> PACKED_TEXT_STORAGE TX_PS_146;
+Array BC_669 --> PACKED_TEXT_STORAGE TX_PS_143;
+Array BC_670 --> PACKED_TEXT_STORAGE TX_PS_144;
 Array BC_671 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_672 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_673 --> PACKED_TEXT_STORAGE TX_PS_21;
+Array BC_673 --> PACKED_TEXT_STORAGE TX_PS_18;
 Array BC_674 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_675 --> PACKED_TEXT_STORAGE TX_PS_147;
-Array BC_676 --> PACKED_TEXT_STORAGE TX_PS_148;
+Array BC_675 --> PACKED_TEXT_STORAGE TX_PS_145;
+Array BC_676 --> PACKED_TEXT_STORAGE TX_PS_146;
 Array BC_677 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_678 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_679 --> PACKED_TEXT_STORAGE TX_PS_22;
+Array BC_679 --> PACKED_TEXT_STORAGE TX_PS_21;
 Array BC_680 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_681 --> PACKED_TEXT_STORAGE TX_PS_149;
-Array BC_682 --> PACKED_TEXT_STORAGE TX_PS_150;
+Array BC_681 --> PACKED_TEXT_STORAGE TX_PS_147;
+Array BC_682 --> PACKED_TEXT_STORAGE TX_PS_148;
 Array BC_683 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_684 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_685 --> PACKED_TEXT_STORAGE TX_PS_22;
+Array BC_685 --> PACKED_TEXT_STORAGE TX_PS_21;
 Array BC_686 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_687 --> PACKED_TEXT_STORAGE TX_PS_151;
-Array BC_688 --> PACKED_TEXT_STORAGE TX_PS_152;
+Array BC_687 --> PACKED_TEXT_STORAGE TX_PS_149;
+Array BC_688 --> PACKED_TEXT_STORAGE TX_PS_150;
 Array BC_689 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_690 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_691 --> PACKED_TEXT_STORAGE TX_PS_20;
+Array BC_691 --> PACKED_TEXT_STORAGE TX_PS_22;
 Array BC_692 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_693 --> PACKED_TEXT_STORAGE TX_PS_153;
-Array BC_694 --> PACKED_TEXT_STORAGE TX_PS_154;
+Array BC_693 --> PACKED_TEXT_STORAGE TX_PS_151;
+Array BC_694 --> PACKED_TEXT_STORAGE TX_PS_152;
 Array BC_695 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_696 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_697 --> PACKED_TEXT_STORAGE TX_PS_20;
+Array BC_697 --> PACKED_TEXT_STORAGE TX_PS_22;
 Array BC_698 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_699 --> PACKED_TEXT_STORAGE TX_PS_155;
-Array BC_700 --> PACKED_TEXT_STORAGE TX_PS_156;
+Array BC_699 --> PACKED_TEXT_STORAGE TX_PS_153;
+Array BC_700 --> PACKED_TEXT_STORAGE TX_PS_154;
 Array BC_701 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_702 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_703 --> PACKED_TEXT_STORAGE TX_PS_19;
+Array BC_703 --> PACKED_TEXT_STORAGE TX_PS_20;
 Array BC_704 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_705 --> PACKED_TEXT_STORAGE TX_PS_157;
-Array BC_706 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_707 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_708 --> PACKED_TEXT_STORAGE TX_PS_158;
-Array BC_709 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_710 --> Default_Value_0 0;
-Array BC_711 --> PACKED_TEXT_STORAGE TX_PS_159;
-Array BC_712 --> PACKED_TEXT_STORAGE TX_PS_160;
-Array BC_713 --> PACKED_TEXT_STORAGE TX_PS_161;
-Array BC_714 --> PACKED_TEXT_STORAGE TX_PS_162;
-Array BC_715 --> PACKED_TEXT_STORAGE TX_PS_163;
+Array BC_705 --> PACKED_TEXT_STORAGE TX_PS_155;
+Array BC_706 --> PACKED_TEXT_STORAGE TX_PS_156;
+Array BC_707 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_708 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_709 --> PACKED_TEXT_STORAGE TX_PS_20;
+Array BC_710 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_711 --> PACKED_TEXT_STORAGE TX_PS_157;
+Array BC_712 --> PACKED_TEXT_STORAGE TX_PS_158;
+Array BC_713 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_714 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_715 --> PACKED_TEXT_STORAGE TX_PS_19;
+Array BC_716 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_717 --> PACKED_TEXT_STORAGE TX_PS_159;
+Array BC_718 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_719 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_720 --> PACKED_TEXT_STORAGE TX_PS_160;
+Array BC_721 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_722 --> Default_Value_0 0;
+Array BC_723 --> PACKED_TEXT_STORAGE TX_PS_161;
+Array BC_724 --> PACKED_TEXT_STORAGE TX_PS_162;
+Array BC_725 --> PACKED_TEXT_STORAGE TX_PS_163;
+Array BC_726 --> PACKED_TEXT_STORAGE TX_PS_164;
+Array BC_727 --> PACKED_TEXT_STORAGE TX_PS_165;
 
 
 

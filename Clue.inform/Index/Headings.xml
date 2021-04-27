@@ -18,164 +18,164 @@
     </dict>
     <key>2</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>19</integer>
+        <key>Line</key><integer>20</integer>
         <key>Title</key><string>Section 1 - Underlying things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>3</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>31</integer>
+        <key>Line</key><integer>33</integer>
         <key>Title</key><string>Chapter 1 - Entryway</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>4</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>43</integer>
+        <key>Line</key><integer>45</integer>
         <key>Title</key><string>Chapter 2 - Hall</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>5</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>53</integer>
+        <key>Line</key><integer>57</integer>
         <key>Title</key><string>Chapter 3 - Study</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>6</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>66</integer>
+        <key>Line</key><integer>70</integer>
         <key>Title</key><string>Chapter 4 - Lounge</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>7</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>76</integer>
+        <key>Line</key><integer>80</integer>
         <key>Title</key><string>Chapter 5 - Library</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>8</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>86</integer>
+        <key>Line</key><integer>92</integer>
         <key>Title</key><string>Chapter 6 - Dining Room</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>9</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>98</integer>
+        <key>Line</key><integer>104</integer>
         <key>Title</key><string>Chapter 7 - Billiard Room</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>10</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>108</integer>
+        <key>Line</key><integer>114</integer>
         <key>Title</key><string>Chapter 8 - Ballroom</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>11</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>120</integer>
+        <key>Line</key><integer>126</integer>
         <key>Title</key><string>Chapter 9 - Kitchen</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>12</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>126</integer>
+        <key>Line</key><integer>132</integer>
         <key>Title</key><string>Chapter 10 - Conservatory</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>13</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>138</integer>
+        <key>Line</key><integer>144</integer>
         <key>Title</key><string>Chapter 11 - Moving Around</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>14</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>149</integer>
+        <key>Line</key><integer>155</integer>
         <key>Title</key><string>Chapter 12 - Secret Passages</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>15</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>164</integer>
+        <key>Line</key><integer>170</integer>
         <key>Title</key><string>Part 2 - Suspects</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>16</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>211</integer>
+        <key>Line</key><integer>217</integer>
         <key>Title</key><string>Part 3 - Weapons</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>17</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>255</integer>
+        <key>Line</key><integer>261</integer>
         <key>Title</key><string>Part 4 - Help</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>18</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>267</integer>
+        <key>Line</key><integer>273</integer>
         <key>Title</key><string>Part 5 - Looking for clues</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>19</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>287</integer>
+        <key>Line</key><integer>293</integer>
         <key>Title</key><string>Part 6 - Time</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>20</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>302</integer>
+        <key>Line</key><integer>308</integer>
         <key>Title</key><string>Part 7 - Winning the Game</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>21</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>310</integer>
+        <key>Line</key><integer>316</integer>
         <key>Title</key><string>Part 8 - Hiding Weapons</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>22</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>312</integer>
+        <key>Line</key><integer>318</integer>
         <key>Title</key><string>Section 1 - Behind things</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>23</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>321</integer>
+        <key>Line</key><integer>327</integer>
         <key>Title</key><string>Section 2 - Set objects at the start of the game</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>24</key><dict>
         <key>Filename</key><string>/Users/jordan/projects/clue/Clue.inform/Source/story.ni</string>
-        <key>Line</key><integer>362</integer>
-        <key>Title</key><string>Section 3 - Debugging info</string>
-        <key>Level</key><integer>5</integer>
-        <key>Indentation</key><integer>2</integer>
+        <key>Line</key><integer>368</integer>
+        <key>Title</key><string>Part 9 - Debugging info</string>
+        <key>Level</key><integer>3</integer>
+        <key>Indentation</key><integer>1</integer>
     </dict>
     <key>25</key><dict>
         <key>Line</key><integer>1</integer>
