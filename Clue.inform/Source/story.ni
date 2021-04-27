@@ -28,7 +28,7 @@ The study is to your northwest, the lounge is to your northeast, the ballroom is
 
 The Hall is a suspect room.
 
-An armchair, a bowl of fruit, a wooden side table, a vase of flowers, a mirror, a rug, candles, chairs, and a dusty wood table are scenery in the Hall. 
+A Queen Anne armchair, a bowl of fruit, a wooden side table, a vase of flowers, a mirror, a rug, candles, chairs, and a dusty wood table are scenery in the Hall. The Queen Anne armchair, wooden side table, chairs, and dusty wood table are supporters. The bowl of fruit is a container.
 
 
 Chapter 3 - Study
@@ -37,14 +37,16 @@ The Study is a room. "In the center of the dimly lit study is a large wood desk 
 
 The hall is to your east, and the library is to your south." The Hall is east of the Study. The Library is south of the Study. The Study is a suspect room.
 
-An ornate armchair, a desk, a fireplace, a rich green carpet, book shelves, books, and paintings are scenery in the Study. 
+An ornate armchair, a lavish desk, a fireplace, a rich green carpet, book shelves, and paintings are scenery in the Study. The ornate armchair and desk are supporters. Understand "chair" as the ornate armchair.
 
 
 Chapter 4 - Lounge
 
 The Lounge is a room. "The lounge is a comfortable place to sit and chat. The centerpiece is a long, comfortable sofa.
 
-  The hall is to your west, and the dining room is to your south." The Hall is west of the Lounge. The Dining Room is south of the Lounge. The Lounge is a suspect room.
+The hall is to your west, and the dining room is to your south."
+
+The Hall is west of the Lounge. The Dining Room is south of the Lounge. The Lounge is a suspect room.
 
 A blond wood table, a silver mirror, a stained glass lamp, an oak armchair, a side chair, a cupboard, a brass lamp, a comfortable sofa, and a cushioned bench are scenery in the Lounge.
 
@@ -69,7 +71,9 @@ The Ballroom is a room. "The billiard room is to the northwest, the hall is to t
 
 Chapter 9 - Kitchen
 
-The Kitchen is a room. "The dining room is to the north, the ballroom is to the west." The Ballroom is west of the Kitchen. The Kitchen is a suspect room. 
+The Kitchen is a room. "The dining room is to the north, the ballroom is to the west. You see a kitchen table, a cupboard, and a granite countertop. An industrial refrigerator looms over the room." The Ballroom is west of the Kitchen. The Kitchen is a suspect room.
+
+A kitchen table, a kitchen cupboard, a refrigerator, and a countertop are scenery in the kitchen. The kitchen table and the countertop are supporters. The refrigerator and the kitchen cupboard are openable containers. The refrigerator and the kitchen cupboard are closed.
 
 Chapter 10 - Conservatory
 
@@ -91,6 +95,10 @@ Chapter 12 - Secret Passages
 Study is down from Kitchen. Kitchen is down from Study.
 Lounge is down from Conservatory. Conservatory is down from Lounge.
 
+After going down:
+	say "You walk down a partially hidden stairway, along a corridor, and up another set of stairs. You arrive in [the location].";
+	continue the action.
+
 Instead of going up in Study: say "You can't go that way."
 Instead of going up in Kitchen: say "You can't go that way."
 Instead of going up in Conservatory: say "You can't go that way."
@@ -101,12 +109,12 @@ Part 2 - Suspects
 
 The murderer is a person that varies.
 
-Colonel Mustard is a man. The description of Colonel Mustard is "[The noun] is a funny-looking dude."
-Professor Plum is a man.
-Mr Green is a man.
-Miss Scarlet is a woman.
-Mrs White is a woman.
-Ms Peacock is a woman.
+Colonel Mustard is a man. The description of Colonel Mustard is "[The noun] was a well-known sportsman, but now walks with a slight limp. He twists his mustachio with a look of concentration."
+Professor Plum is a man. The description of Professor Plum is "[The noun], standing aloof in his tweed suit, looks down his eyeglasses at you."
+Mr Green is a man. The description of Mr Green is "[The noun] is wearing a tan suit with a green tie."
+Miss Scarlet is a woman. The description of Miss Scarlet is "[The noun] is wearing a red cocktail dress. Her long straight hair covers the left side of her face."
+Mrs White is a woman. The description of Mrs White is "[The noun] is wearing a black dress, fringed with decorative white lace."
+Ms Peacock is a woman. The description of Ms Peacock is "[The noun] is wearing a purple dress. She eyes you nervously from behing her car-eye framed glasses."
 
 When play begins:
 	now the murderer is a random person who is not the player;
@@ -117,12 +125,9 @@ When play begins:
 	move Mrs White to a random suspect room;
 	move Ms Peacock to a random suspect room.
 
-Instead of examining the murderer:
-    say "[The noun] has blood spots on [their] sleeve!";
+After examining the murderer:
+    say "Looking at [The noun] closely, you notice blood spots on [their] sleeve!";
     increase the score by 10.
-
-Instead of examining a person:
-    say "[The noun] is someone who looks weird."
 
 Every turn:
 	If a random person (called the current person) who is not the player is in a room (called the current space):
@@ -166,7 +171,7 @@ A heavy gray handgun is a revolver. The description of the heavy gray handgun is
 
 [ Ropes ]
 A thin rope is a rope. The description of the thin rope is "A thin, but sturdy rope."
-A braided curtain tie is a rope. The description of the braided curtain tie is "A length of surprisingly strong fabric for typing back heavy curtains."
+A braided curtain tie is a rope. The description of the braided curtain tie is "A length of surprisingly strong fabric for tying back heavy curtains."
 
 [ Wrenches ]
 A lugwrench is a wrench. The description of the lugwrench is "A heavy wrench for removing bolts." Understand "wrench" as the lugwrench.
@@ -188,7 +193,7 @@ When play begins:
 	move the butcher knife to a random suspect room;
 	move the braided curtain tie to a random suspect room.
 
-Instead of examining the murder weapon:
+After examining the murder weapon:
     say "[The noun] is covered in blood!";
     increase the score by 10.
 
@@ -200,16 +205,19 @@ Carry out asking for help:
 	
 	To move around, you can enter the direction you want to go: north, south, east, west, northwest, northeast, southwest, southeast, up, or down. You can abbreviate any of these directions with their common abbreviations: n, s, e, w, ne, sw, etc.
 	
-	When you see people and objects in rooms, you can look at them by typing 'look at <person>' or 'look at <object>. For example: 'look at Colonel Mustard' or 'look at silver candlestick'. You may abbreviate the word 'look' as 'l'. Many people and object names can also be shortened. In the example above, for example, you could type 'l at Mustard' or 'l at candlestick' instead." 
+	When you see people and objects in rooms, you can look at them by typing 'look at <person>' or 'look at <object>. For example: 'look at Colonel Mustard' or 'look at silver candlestick'. You may also 'investigate' or 'look around' a room and 'look at' or 'examine' its furniture and decor. You may even find it useful to look under, behind, and inside certain objects.
+	
+	You may abbreviate the word 'look' as 'l'. Many people and object names can also be shortened. In the example above, for example, you could type 'l at Mustard', 'l at candlestick' , or even 'l at silver'." 
 
 Part 5 - Looking for clues
 
-Understand "look for clues" or "look around" or "investigate" or "look at floor" or "examine floor" or "examine room" as looking for clues. Looking for clues is an action applying to nothing.
+Understand "look for clues" or "look around" or "investigate" or "look at floor" or "examine floor" or "examine room" or "search room" or "search for clues" as looking for clues. Looking for clues is an action applying to nothing.
 
 Instead of looking for clues:
     say "[one of]It looks like the floors are a bit dusty[or]You don't see anything of note[purely at random]."
 
-Instead of looking for clues in the Kitchen: say "The linoleum floors look clean."
+Instead of looking for clues in the Kitchen, or looking for clues in the Study, or looking for clues in the Conservatory, or looking for clues in the Lounge: say "There is a partially-hidden staircase going down into the darkness."
+
 [ Add more details here ]
 
 Instead of looking for clues in the crimescene:
@@ -225,7 +233,8 @@ Part 6 - Time
 
 When play begins:
 	now the time of day is 7:29 PM;
-	now the right hand status line is "[time of day]".
+	now the right hand status line is "[time of day]";
+	now the command prompt is "> ".
 
 Every turn:
 	If the time of day is after 8:15 PM:
@@ -242,3 +251,57 @@ Every turn:
 		say "You have solved the mystery. The police arrive at the door, put the [murder weapon] in an evidence bag, cordon off the [crimescene], and haul [murderer] away. You win!";
 		end the story.
 
+
+Part 8 - Hiding Weapons
+
+
+Section 1 - Underlying things
+
+Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
+
+Instead of looking under a thing which is underlaid by something (called the lost object):
+    say "You find [the list of things which underlie the noun]!";
+    now every thing which underlies the noun is carried by the player;
+    now every thing which underlies the noun does not underlie the noun.
+
+Section 2 - Behind things 
+
+Behindlying relates various things to one thing. The verb to behindlie means the behindlying relation. The verb to be behind means the behindlying relation.
+
+[ Instead of looking behind a thing which is behindlaid by something (called the lost object):
+    say "You find [the list of things which behindlie the noun]!";
+    now every thing which is behind the noun is carried by the player;
+    now every thing which is behind the noun does not behind the noun. ]
+
+Section 3 - Set objects at the start of the game
+
+[ Objects may be hidden under things]
+An overthing is a kind of thing.
+
+The fireplace is a container. The rich green carpet is an overthing.
+The blond wood table is a supporter.
+The oak armchair is an overthing. The comfortable sofa is an overthing. The cushioned bench is an overthing.
+
+When play begins:
+	repeat with w running through weapons:
+		let spot be a random number between 1 and 10;
+		If spot is less than 4:
+			let uthing be a random overthing;
+			say "putting [w] under [uthing]";
+			now the w is beneath uthing;
+		If spot is greater than 6:
+			let cthing be a random container;
+			say "putting [w] inside [cthing]";
+			now the w is inside cthing;
+		if spot is 5:
+			let supthing be a random supporter;
+			say "putting [w] on [supthing]";
+			now the w is on supthing;
+		say "[line break]".
+
+When play begins:
+	repeat with cs running through candlesticks:
+		If a random chance of 1 in 4 succeeds:
+			let supthing be a random supporter;
+			say "putting [cs] on [supthing]";
+			now the cs is on supthing.
