@@ -2,23 +2,43 @@
 
 Use scoring. The maximum score is 30.
 
+The debugList is a list of texts which varies.
+
 Part 1 - Rooms
 
 A room can be a suspect room.
 A crimescene is a room that varies.
-When play begins:
-	now the crimescene is a random suspect room.
 
 Instead of examining the crimescene:
     say "You found blood spots on the floor!"
 
+When play begins:
+	let sr be a random suspect room;
+	now the crimescene is sr.
+
+Section 1 - Underlying things
+
+Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
+
+Instead of looking under a thing which is underlaid by something (called the lost object):
+    say "You find [a list of things which underlie the noun] under the [noun]!";
+    now every thing which underlies the noun is carried by the player;
+    now every thing which underlies the noun does not underlie the noun.
+
+[ Objects may be hidden under things]
+An coverer is a kind of thing.
+
 Chapter 1 - Entryway
 
-The Entryway is a room. "Welcome to Clue! Your name is Detective Black. You are investigating a murder in the Mystery Mansion. You can move around the mansion, find suspects, possible murder weapons, and the scene of the crime. Once you've deduced the murder weapon, murderer, and room where the murder took place, you win! Just don't run out of time...
+The Entryway is a room.
+
+"Welcome to Clue! Your name is Detective Black. You are investigating a murder in the Mystery Mansion. You can move around the mansion, find suspects, the murder weapon (as well as some red herrings), and the scene of the crime. Once you've deduced the murder weapon, murderer, and room where the murder took place, you win! Just don't run out of time...
 
 If you need help, type 'help'.
 
-The hall is to your south." The Hall is south of the Entryway. 
+The hall is to your south."
+
+The Hall is south of the Entryway. 
 
 Chapter 2 - Hall
 
@@ -28,17 +48,20 @@ The study is to your northwest, the lounge is to your northeast, the ballroom is
 
 The Hall is a suspect room.
 
-A Queen Anne armchair, a bowl of fruit, a wooden side table, a vase of flowers, a mirror, a rug, candles, chairs, and a dusty wood table are scenery in the Hall. The Queen Anne armchair, wooden side table, chairs, and dusty wood table are supporters. The bowl of fruit is a container.
-
+A Queen Anne armchair, a bowl of fruit, a wooden side table, a vase of flowers, a mirror, a rug, candles, chairs, and a dusty wood table are scenery in the Hall. The wooden side table and dusty wood table are supporters. The bowl of fruit is a container. The Queen Anne armchair and chairs are coverers.
 
 Chapter 3 - Study
 
-The Study is a room. "In the center of the dimly lit study is a large wood desk with an ornate armchair. Another armchair sits against the wall. There are several paintings adorning the wall. Someone has lit a fire, which is still smoldering, in the fireplace. Books line shelves along the north and east walls. A rich green carpet, tattered in places, covers the floorboards.
+The Study is a room. The Hall is east of the Study. The Library is south of the Study. The Study is a suspect room.
 
-The hall is to your east, and the library is to your south." The Hall is east of the Study. The Library is south of the Study. The Study is a suspect room.
+"In the center of the dimly lit study is a large wood desk with an ornate armchair. Another armchair sits against the wall. There are several paintings adorning the wall. Someone has lit a fire, which is still smoldering, in the fireplace. Books line shelves along the north and east walls. A rich green carpet, tattered in places, covers the floorboards.
 
-An ornate armchair, a lavish desk, a fireplace, a rich green carpet, book shelves, and paintings are scenery in the Study. The ornate armchair and desk are supporters. Understand "chair" as the ornate armchair.
+The hall is to your east, and the library is to your south."
 
+An ornate armchair, a lavish desk, a fireplace, a rich green carpet, book shelves, and paintings are scenery in the Study. The desk are supporters. Understand "chair" as the ornate armchair. The  ornate armchair is an coverer.
+
+The fireplace is a container. The rich green carpet is a coverer.
+The blond wood table is a supporter. The oak armchair is a coverer. The comfortable sofa is a coverer. The cushioned bench is a coverer.
 
 Chapter 4 - Lounge
 
@@ -52,32 +75,65 @@ A blond wood table, a silver mirror, a stained glass lamp, an oak armchair, a si
 
 Chapter 5 - Library
 
-The Library is a room. "The study is to your north, the hall is to your east, and the billiard room is to your south." The Study is north of the Library. The Hall is east of the Library. The Billiard Room is south of the Library. The Library is a suspect room.
+The Library is a room. "In thr library you see bookcases, a green-tinted lamp, a hard dark brown chair, A well-used table, a roaring fireplace, a threadbare armchair, a rumpled couch, a solid wood bench, and a stool.
 
-Bookcases, a green-tinted lamp, a hard dark brown chair, A well-used table, a roaring fireplace, a threadbare armchair, a rumpled couch, a solid wood bench, and a stool are scenery in the Library.
+The study is to your north, the hall is to your east, and the billiard room is to your south." The Study is north of the Library. The Hall is east of the Library. The Billiard Room is south of the Library. The Library is a suspect room.
 
+bookcases, a green-tinted lamp, a hard dark brown chair, A well-used table, a roaring fireplace, a threadbare armchair, a rumpled couch, a solid wood bench, and a stool are scenery in the Library.
+
+The bookcases and well-used table are supporters. The dark brown chair and couch are coverers. The fireplace is a container.
 
 Chapter 6 - Dining Room
 
-The Dining Room is a room. "The hall is to your northwest, the ballroom is to your southwest, the lounge is to your north, and the kitchen is to the south." The Hall is northwest of the Dining Room. The Ballroom is southwest of the Dining Room. The Kitchen is south of the Dining Room. The Lounge is north of the Dining Room. The Dining Room is a suspect room.
+The Dining Room is a room. "A dining room table, a sideboard, dining room chairs, a small green sofa, a painting, and a china cabinet are here.
+
+The hall is to your northwest, the ballroom is to your southwest, the lounge is to your north, and the kitchen is to the south."
+
+The Hall is northwest of the Dining Room. The Ballroom is southwest of the Dining Room. The Kitchen is south of the Dining Room. The Lounge is north of the Dining Room. The Dining Room is a suspect room.
+
+A dining room table, a sideboard, dining room chairs, a small green sofa, a painting, and a china cabinet are scenery in the dining room.
+
+The dining room table is a supporter. The sideboard and china cabinet are closed containers. The sofa is a coverer.
 
 Chapter 7 - Billiard Room
 
-The Billiard Room is a room. "The library is to the north, the ballroom is to the east, the conservatory is to the south." The Ballroom is east of the Billiard Room. The Conservatory is south of the Billiard Room. Understand "the pool room" or "the game room" as the Billiard Room. Billiard Room is a suspect room.
+The Billiard Room is a room. "A billiard table is the centerpiece of the billiard room, its green surface slightly discolored with age. You also see a blue armchair and a rack of cue sticks. 
+
+The library is to the north, the ballroom is to the east, the conservatory is to the south." The Ballroom is east of the Billiard Room. The Conservatory is south of the Billiard Room. Understand "the pool room" or "the game room" as the Billiard Room. Billiard Room is a suspect room.
+
+The billiard table, 4 cue sticks, a blue upholstered armchair, a wet bar, and stools are scenery in the billiard room. Understand "pool table" as billiard table.
+
+The billiard table is a supporter. The blue upholstered armchair is a coverer. Understand "chair" as the blue upholstered armchair. The stools are coverers.
 
 Chapter 8 - Ballroom
 
-The Ballroom is a room. "The billiard room is to the northwest, the hall is to the north, the dining room is to the northeast, the conservatory is to the southwest, and the kitchen is to the southeast." The Billiard room is northwest of the Ballroom. The Dining Room is northeast of the Ballroom. The Conservatory is southwest of the Ballroom. The Kitchen is southeast of the Ballroom. The Ballroom is a suspect room.
+The Ballroom is a room. "A piano, a red sofa, a curved purple sofa, two high-backed chairs, a curio cabinet, and wall sconces are in the ballroom.
+
+The billiard room is to the northwest, the hall is to the north, the dining room is to the northeast, the conservatory is to the southwest, and the kitchen is to the southeast."
+
+The Billiard room is northwest of the Ballroom. The Dining Room is northeast of the Ballroom. The Conservatory is southwest of the Ballroom. The Kitchen is southeast of the Ballroom. The Ballroom is a suspect room.
+
+A piano, a red sofa, a curved purple sofa, two high-backed chairs, a curio cabinet, and wall sconces are scenery in the ballroom.
+
+The piano, red sofa, and curved purple sofa are coverers. The curio cabinet is a closed container.
 
 Chapter 9 - Kitchen
 
-The Kitchen is a room. "The dining room is to the north, the ballroom is to the west. You see a kitchen table, a cupboard, and a granite countertop. An industrial refrigerator looms over the room." The Ballroom is west of the Kitchen. The Kitchen is a suspect room.
+The Kitchen is a room. "You see a kitchen table, a cupboard, and a granite countertop. An industrial refrigerator looms over the room. The dining room is to the north, the ballroom is to the west." The Ballroom is west of the Kitchen. The Kitchen is a suspect room.
 
 A kitchen table, a kitchen cupboard, a refrigerator, and a countertop are scenery in the kitchen. The kitchen table and the countertop are supporters. The refrigerator and the kitchen cupboard are openable containers. The refrigerator and the kitchen cupboard are closed.
 
 Chapter 10 - Conservatory
 
-The Conservatory is a room. "The ballroom is to the east. The billiard room is to the north." The Ballroom is east of Conservatory. The Conservatory is a suspect room.
+The Conservatory is a room. "The conservatory is home to a wide variety of potted plants of all sizes. The heat and humidity are high to keep some of the more exotic species comfortable. Two entire walls of the conservatory are windowed. A utility closet and sink sit on opposite corners of the room, and a yellow bench rests against the windows of one wall.
+
+The ballroom is to the east. The billiard room is to the north." The Ballroom is east of Conservatory. The Conservatory is a suspect room.
+
+An assortment of potted plants, a utility closet, a sink, and a yellow bench are scenery in the conservatory.
+
+The assortment of potted plants are a container. The utility closet is a closed container. The sink and the yellow bench are coverers.
+
+Before examining in assortment of potted plants, say "You look through some of the larger plant pots and vases."
 
 Chapter 11 - Moving Around
 
@@ -110,14 +166,20 @@ Part 2 - Suspects
 The murderer is a person that varies.
 
 Colonel Mustard is a man. The description of Colonel Mustard is "[The noun] was a well-known sportsman, but now walks with a slight limp. He twists his mustachio with a look of concentration."
+
 Professor Plum is a man. The description of Professor Plum is "[The noun], standing aloof in his tweed suit, looks down his eyeglasses at you."
+
 Mr Green is a man. The description of Mr Green is "[The noun] is wearing a tan suit with a green tie."
+
 Miss Scarlet is a woman. The description of Miss Scarlet is "[The noun] is wearing a red cocktail dress. Her long straight hair covers the left side of her face."
+
 Mrs White is a woman. The description of Mrs White is "[The noun] is wearing a black dress, fringed with decorative white lace."
-Ms Peacock is a woman. The description of Ms Peacock is "[The noun] is wearing a purple dress. She eyes you nervously from behing her car-eye framed glasses."
+
+Ms Peacock is a woman. The description of Ms Peacock is "[The noun] is wearing a purple dress. She eyes you nervously from behing her cat-eye framed glasses."
 
 When play begins:
-	now the murderer is a random person who is not the player;
+	let mrdr be a random person who is not the player;
+	now the murderer is mrdr;
 	move Colonel Mustard to a random suspect room;
 	move Professor Plum to a random suspect room;
 	move Mr Green to a random suspect room;
@@ -181,17 +243,10 @@ A pipe wrench is a wrench. The description of the pipe wrench is "The perfect to
 A lead pipe is a pipe. The description of the lead pipe is "A heavy-duty pipe."
 
 A murder weapon is a weapon that varies.
+
 When play begins:
-	now the murder weapon is a random weapon;
-	move the dull silver candlestick to a random suspect room;
-	move the bronze candlestick to a random suspect room;
-	move the pocket knife to a random suspect room;
-	move the small pistol to a random suspect room;
-	move the heavy gray handgun to a random suspect room;
-	move the thin rope to a random suspect room;
-	move the lugwrench to a random suspect room;
-	move the butcher knife to a random suspect room;
-	move the braided curtain tie to a random suspect room.
+	let mw be a random weapon;
+	now the murder weapon is mw.
 
 After examining the murder weapon:
     say "[The noun] is covered in blood!";
@@ -238,7 +293,7 @@ When play begins:
 
 Every turn:
 	If the time of day is after 8:15 PM:
-		say "You hear a car engine start in the courtyard and pull away. [Murderer] has escaped.";
+		say "You hear a car engine start in the courtyard and pull away. [Murderer] has escaped. ([They] used [the murder weapon] in [the crimescene].)";
 		end the story.
 Every turn:
 	If the time of day is 7:59 PM:
@@ -248,23 +303,13 @@ Part 7 - Winning the Game
 
 Every turn:
 	If the score is greater than 20:
-		say "You have solved the mystery. The police arrive at the door, put the [murder weapon] in an evidence bag, cordon off the [crimescene], and haul [murderer] away. You win!";
+		say "You have solved the mystery. The police arrive at the door, put [the murder weapon] in an evidence bag, cordon off [the crimescene], and haul [murderer] away in handcuffs. You win!";
 		end the story.
 
 
 Part 8 - Hiding Weapons
 
-
-Section 1 - Underlying things
-
-Underlying relates various things to one thing. The verb to underlie means the underlying relation. The verb to be under means the underlying relation. The verb to be beneath means the underlying relation.
-
-Instead of looking under a thing which is underlaid by something (called the lost object):
-    say "You find [the list of things which underlie the noun]!";
-    now every thing which underlies the noun is carried by the player;
-    now every thing which underlies the noun does not underlie the noun.
-
-Section 2 - Behind things 
+Section 1 - Behind things 
 
 Behindlying relates various things to one thing. The verb to behindlie means the behindlying relation. The verb to be behind means the behindlying relation.
 
@@ -273,35 +318,52 @@ Behindlying relates various things to one thing. The verb to behindlie means the
     now every thing which is behind the noun is carried by the player;
     now every thing which is behind the noun does not behind the noun. ]
 
-Section 3 - Set objects at the start of the game
+Section 2 - Set objects at the start of the game
 
-[ Objects may be hidden under things]
-An overthing is a kind of thing.
-
-The fireplace is a container. The rich green carpet is an overthing.
-The blond wood table is a supporter.
-The oak armchair is an overthing. The comfortable sofa is an overthing. The cushioned bench is an overthing.
-
+[ 
+	There's a 40% chance a weapon will be in something,
+	a 40% chance a weapon will be under something,
+	and a 10% chance a weapon will be on something.
+]
 When play begins:
 	repeat with w running through weapons:
 		let spot be a random number between 1 and 10;
-		If spot is less than 4:
-			let uthing be a random overthing;
-			say "putting [w] under [uthing]";
-			now the w is beneath uthing;
-		If spot is greater than 6:
-			let cthing be a random container;
-			say "putting [w] inside [cthing]";
-			now the w is inside cthing;
+		if spot is less than 5:
+			let cov be a random coverer;
+			add "putting [w] under [cov]" to debugList;
+			now the w is beneath cov;
+		if spot is greater than 5:
+			let con be a random container;
+			add "putting [w] inside [con]" to debugList;
+			now the w is inside con;
 		if spot is 5:
-			let supthing be a random supporter;
-			say "putting [w] on [supthing]";
-			now the w is on supthing;
-		say "[line break]".
+			let sup be a random supporter;
+			add "putting [w] on [sup]" to debugList;
+			now the w is on sup;
 
+[ Special rule for candlesticks to put them in their natural habitat ]
 When play begins:
 	repeat with cs running through candlesticks:
-		If a random chance of 1 in 4 succeeds:
-			let supthing be a random supporter;
-			say "putting [cs] on [supthing]";
-			now the cs is on supthing.
+		let sup be a random supporter;
+		add "putting [cs] on [sup]" to debugList;
+		now the cs is on sup.
+
+[ Always hide the murder weapon in something or under something, even if it's a candlestick ]
+When play begins:
+	If a random chance of 1 in 2 succeeds:
+		let con be a random container;
+		add "putting murder weapon [murder weapon] in [the con]" to debugList;
+		now the murder weapon is in con;
+	otherwise:
+		let cov be a random coverer;
+		add "putting murder weapon [murder weapon] under [the cov]" to debugList;
+		now the murder weapon is under cov;
+
+Section 3 - Debugging info
+
+Understand "debug" as asking for debug info. Asking for debug info is an action out of world.
+
+Carry out asking for debug info:
+	say "The crimescene is the [bold type][crimescene][roman type]. The murderer is [bold type][murderer][roman type]. The murder weapon is the [bold type][murder weapon][roman type].[line break][line break]";
+	repeat with cs running through debugList:
+		say "[cs][line break]";
