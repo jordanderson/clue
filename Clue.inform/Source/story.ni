@@ -277,7 +277,7 @@ Understand "look for clues" or "look around" or "investigate" or "look at floor"
 Instead of looking for clues:
     say "[one of]It looks like the floors are a bit dusty[or]You don't see anything of note[purely at random]."
 
-Instead of looking for clues in the Kitchen, or looking for clues in the Study, or looking for clues in the Conservatory, or looking for clues in the Lounge: say "There is a partially-hidden staircase going down into the darkness."
+[Instead of looking for clues in the Kitchen, or looking for clues in the Study, or looking for clues in the Conservatory, or looking for clues in the Lounge: say "There is a partially-hidden staircase going down into the darkness."]
 
 [ Add more details here ]
 

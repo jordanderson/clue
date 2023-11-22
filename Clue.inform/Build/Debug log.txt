@@ -1,198 +1,274 @@
-Debugging log of Inform 7
-Inform called as: /Applications/Inform.app/Contents/MacOS/6M62/ni --internal /Applications/Inform.app/Contents/Resources/retrospective/6M62 --external /Users/jordan/Library/Inform --project /Users/jordan/projects/clue/Clue.inform --format=ulx
-Found language bundle 'German' (built in)
-Found language bundle 'Italian' (built in)
-Found language bundle 'English' (built in)
-Found language bundle 'French' (built in)
-Found language bundle 'Swedish' (built in)
-Found language bundle 'Spanish' (built in)
-Reading language definition from </Applications/Inform.app/Contents/Resources/retrospective/6M62/Languages/English/Syntax.preform>
-720 declarations read (14183 words)
+Debugging log of inform7
+inform7 was called as: /Applications/Inform.app/Contents/MacOS/ni -internal /Applications/Inform.app/Contents/Resources/Internal -external /Users/emmettanderson/Library/Inform -project /Users/emmettanderson/Documents/GitHub/clue/Clue.inform -format=ulx
+Reading further switches from file: <no file>
+Completed expert settings file
+Using Inform kit 'BasicInformKit' (priority 0).
+Using Inform kit 'EnglishLanguageKit' (priority 1).
+Using Inform kit 'WorldModelKit' (priority 2).
+Using Inform kit 'CommandParserKit' (priority 3).
+756 Preform nonterminals read from /Applications/Inform.app/Contents/Resources/Internal/Languages/English/Syntax.preform
+I've now read your source text, which is 3266 words long.
+Included: core, naming, instance counting, interactive fiction, spatial model, backdrops, bibliographic data, chronology, devices, mapping, persons, player, regions, scenes, scoring, timed rules, times of day, actions, going, command, showme, multimedia, figures, sounds, glulx external files
+Excluded: 
+I've also read Basic Inform by Graham Nelson, which is 7691 words long.
+I've also read English Language by Graham Nelson, which is 2328 words long.
+I've also read Standard Rules by Graham Nelson, which is 32164 words long.
 
 
 -----------------------------------------------------
-Phase I ... Lexical analysis
------------------------------------------------------
-
-I've now read your source text, which is 3306 words long.
-
-
------------------------------------------------------
-Phase II ... Semantic analysis Ia
------------------------------------------------------
-
-I've also read Standard Rules by Graham Nelson, which is 42655 words long.
-I've also read English Language by Graham Nelson, which is 2297 words long.
-
-
------------------------------------------------------
-Phase III ... Initialise language semantics
+Phase I ... Dividing source into compilation units
 -----------------------------------------------------
 
 
 
 -----------------------------------------------------
-Phase IV ... Semantic analysis Ib
+Phase II ... Making built in infrastructure
+-----------------------------------------------------
+
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/BasicInformKit/kinds/Macros.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/BasicInformKit/kinds/Protocols.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/BasicInformKit/kinds/Core.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/BasicInformKit/kinds/Punctuation.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/BasicInformKit/kinds/Files.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/WorldModelKit/kinds/Actions.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/WorldModelKit/kinds/Times.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/WorldModelKit/kinds/Scenes.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/WorldModelKit/kinds/Figures.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/WorldModelKit/kinds/Sounds.neptune
+Loading kinds definitions from /Applications/Inform.app/Contents/Resources/Internal/Inter/CommandParserKit/kinds/Parsing.neptune
+.... Task__make_built_in_kind_constructors() took 1cs
+
+
+-----------------------------------------------------
+Phase III ... Pre-pass through major nodes
+-----------------------------------------------------
+
+.... MajorNodes__pre_pass() took 18cs
+
+
+-----------------------------------------------------
+Phase IV ... First pass through major nodes
+-----------------------------------------------------
+
+.... MajorNodes__pass_1() took 12cs
+
+
+-----------------------------------------------------
+Phase V ... Second pass through major nodes
+-----------------------------------------------------
+
+.... MajorNodes__pass_2() took 1cs
+
+
+-----------------------------------------------------
+Phase VI ... Making the model world
 -----------------------------------------------------
 
 
 
 -----------------------------------------------------
-Phase V ... Semantic analysis II
+Phase VII ... Completing the model world
 -----------------------------------------------------
 
 
 
 -----------------------------------------------------
-Phase VI ... Semantic analysis III
+Phase VIII ... Tables and grammar
 -----------------------------------------------------
 
 
 
 -----------------------------------------------------
-Phase VII ... First pass through assertions
+Phase IX ... Augment model world
+-----------------------------------------------------
+
+.... World__stage_V() took 2cs
+
+
+-----------------------------------------------------
+Phase X ... Phrases and rules
+-----------------------------------------------------
+
+.... ImperativeDefinitions__assess_all() took 5cs
+
+
+-----------------------------------------------------
+Phase XI ... Generating inter (1)
+-----------------------------------------------------
+
+.... RTKindConstructors__compile() took 5cs
+
+
+-----------------------------------------------------
+Phase XII ... Generating inter (2)
+-----------------------------------------------------
+
+.... CompletionModule__compile() took 1cs
+
+
+==== Phase XII.1 ... Slashing command grammar ====
+
+
+
+==== Phase XII.2 ... Determining command grammar ====
+
+
+
+-----------------------------------------------------
+Phase XIII ... Generating inter (3)
+-----------------------------------------------------
+
+.... Sequence__undertake_queued_tasks() took 155cs
+.... Sequence__undertake_queued_tasks() took 1cs
+.... RTPhrasebook__compile_entries() took 7cs
+
+
+-----------------------------------------------------
+Phase XIV ... Generating inter (4)
 -----------------------------------------------------
 
 
 
------------------------------------------------------
-Phase VIII ... Second pass through assertions
------------------------------------------------------
+==== Phase XIV.1 ... Slashing command grammar ====
+
+
+
+==== Phase XIV.2 ... Determining command grammar ====
 
 
 
 -----------------------------------------------------
-Phase IX ... Making the model world
+Phase XV ... Generating inter (5)
 -----------------------------------------------------
 
-
-
------------------------------------------------------
-Phase X ... Tables and grammar
------------------------------------------------------
-
-
-
------------------------------------------------------
-Phase XI ... Phrases and rules
------------------------------------------------------
-
-
-
------------------------------------------------------
-Phase XII ... Code generation
------------------------------------------------------
-
-
-
-==== Phase XII.1 ... Compiling the storage for the model world ====
-
-
-
-==== Phase XII.2 ... Compiling the tables ====
-
-
-
-==== Phase XII.3 ... Compiling the equations ====
-
-
-
-==== Phase XII.4 ... Compiling the named action patterns ====
-
-
-
-==== Phase XII.5 ... Compiling the action routines ====
-
-
-
-==== Phase XII.6 ... Compiling first block of phrases ====
-
-
-
-==== Phase XII.7 ... Compiling the rulebooks ====
-
-
-
-==== Phase XII.8 ... Compiling scene details ====
-
-
-
-==== Phase XII.9 ... CTNL ====
-
-
-
-==== Phase XII.10 ... Slashing grammar (G1) ====
-
-
-
-==== Phase XII.11 ... Determining grammar (G2) ====
-
-
-
-==== Phase XII.12 ... Compiling GPR tokens for parsing various kinds of value ====
-
-
-
-==== Phase XII.13 ... Compiling second block of phrases ====
-
-
-
-==== Phase XII.14 ... Compiling noun and scope filter tokens ====
-
-
-
-==== Phase XII.15 ... Compiling chronology ====
-
-
-
-==== Phase XII.16 ... Compiling I6 Verb directives ====
-
-
-
-==== Phase XII.17 ... Slashing grammar (G1) ====
-
-
-
-==== Phase XII.18 ... Determining grammar (G2) ====
-
-
-
-==== Phase XII.19 ... Sorting and compiling non-value grammar (G3, G4) ====
-
-
-
-==== Phase XII.20 ... Compiling noun and scope filter tokens ====
-
-
-
-==== Phase XII.21 ... Compiling routines from predicate calculus ====
-
+.... Sequence__undertake_queued_tasks() took 1cs
 Providing for a total heap of 8192, given requirement of 8192
+.... Sequence__lint_inter() took 3cs
 
 
 -----------------------------------------------------
-Phase XIII ... Compilation now complete
+Phase XVI ... Bibliographic work
 -----------------------------------------------------
 
-Total of 107 files written as streams.
-CPU time: 88 centiseconds
 
 
-That concludes the debugging log from this run of Inform.
-Its contents were as follows, and can be changed by placing
-text like 'Include property creations in the debugging log.'
-or 'Omit everything from the debugging log.' in the source.
+-----------------------------------------------------
+Phase XVII ... Complete
+-----------------------------------------------------
+
+Compile CPU time: 226 centiseconds
+
+
+==== Phase XVII.1 ... step 1/15: read <- *memory ====
+
+
+
+==== Phase XVII.2 ... step 2/15: parse-insertions ====
+
+
+
+==== Phase XVII.3 ... step 3/15: resolve-conditional-compilation ====
+
+
+
+==== Phase XVII.4 ... step 4/15: compile-splats ====
+
+
+
+==== Phase XVII.5 ... step 5/15: load-binary-kits ====
+
+
+
+==== Phase XVII.6 ... step 6/15: make-synoptic-module ====
+
+
+
+==== Phase XVII.7 ... step 7/15: shorten-wiring ====
+
+
+
+==== Phase XVII.8 ... step 8/15: detect-indirect-calls ====
+
+
+
+==== Phase XVII.9 ... step 9/15: make-identifiers-unique ====
+
+
+
+==== Phase XVII.10 ... step 10/15: reconcile-verbs ====
+
+
+
+==== Phase XVII.11 ... step 11/15: eliminate-redundant-labels ====
+
+1813 redundant label(s) removed
+
+
+==== Phase XVII.12 ... step 12/15: eliminate-redundant-operations ====
+
+389 redundant operation(s) removed
+
+
+==== Phase XVII.13 ... step 13/15: optionally-generate text ->  ====
+
+
+
+==== Phase XVII.14 ... step 14/15: generate inform6 -> auto.inf ====
+
+
+
+==== Phase XVII.15 ... step 15/15: index ====
+
+Trying to close p at line 324 of 'services/html-module/Chapter 2/Documentation Renderer.w', but:
+Tag error: closed HTML tag which wasn't open
+HTML tag stack:
+    1. body (opened at line 370 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w')
+    2. html (opened at line 236 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w')
+
+
+Trying to close body at line 374 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w', but:
+Tag error: closed HTML tag which wasn't open
+HTML tag stack:
+    1. p (opened at line 327 of 'services/html-module/Chapter 2/Documentation Renderer.w')
+    2. html (opened at line 236 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w')
+
+
+Trying to close p at line 324 of 'services/html-module/Chapter 2/Documentation Renderer.w', but:
+Tag error: closed HTML tag which wasn't open
+HTML tag stack:
+    1. body (opened at line 370 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w')
+    2. html (opened at line 236 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w')
+
+
+Trying to close body at line 374 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w', but:
+Tag error: closed HTML tag which wasn't open
+HTML tag stack:
+    1. p (opened at line 327 of 'services/html-module/Chapter 2/Documentation Renderer.w')
+    2. html (opened at line 236 of '/Users/tobynelson/Code/Inform Core/inweb/foundation-module/Chapter 5/HTML.w')
+
+
+Back end elapsed time: 150cs
+Total of 102 files written as streams.
+Vacant escapes: %: ..CDE.GH..K.M.O.QR.TU...YZab..e..h.jklm.o.qr......yz0123456789
+Vacant escapes: $: .....F...J..........UVW.....................s.u..x.........789
+
+
+That concludes the debugging log from this run.
+Its contents were as follows -
 
 Included:
-  debugging log contents  debugging log inclusions
+  (nothing)
 Omitted:
-  action creations   action pattern compilation  action pattern parsing  assemblies    assertions    case insensitive filehandling
-  conditions    constructed past participles  constructed plurals   description compilation   excerpt meanings   excerpt parsing 
-  expressions    extensions census   figure creations   grammar    grammar construction   headings  
-  implications    inferences    kind changes   kind checking   kind creations   lexical output 
-  local variables   matching    meaning list allocation  memory allocation   noun resolution   object compilation 
-  object creations   object tree   phrase comparisons   phrase compilation   phrase creations   phrase registration 
-  phrase usage   predicate calculus   predicate calculus workings  pronouns    property creations   property provision 
-  property translations   relation definitions   rule attachments   rulebook compilation   spatial map   spatial map workings
-  specification permissions   specification usage   specificities    table construction   template reading   text substitutions 
-  time periods   variable creations   verifications    vocabulary  
+  debugging-log-inclusions  shell-usage  memory-usage  text-files  lexical-output  vocabulary
+  constructed-past-participles  constructed-plurals  excerpt-meanings  excerpt-parsing  linguistic-stock  time-periods
+  verb-usages  verb-forms  kind-changes  kind-checking  kind-creations  matching
+  predicate-calculus  predicate-calculus-workings  intermediate-file-reading  inter-memory-usage  inter-binary  inter-symbols
+  inter-connectors  constant-depth-calculation  extensions-census  headings  task-queue  inter
+  inform-inter  assemblies  assertions  implications  noun-resolution  pronouns
+  relation-definitions  object-creations  phrase-usage  specificities  text-substitutions  variable-creations
+  table-construction  activity-creations  inferences  object-compilation  property-creations  property-provision
+  property-translations  rule-attachments  rulebook-compilation  description-compilation  expressions  local-variables
+  phrase-comparisons  phrase-compilation  phrase-creations  phrase-registration  template-reading  resolving-conditional-compilation
+  external-symbol-resolution  code-elimination  property-allocation  inter-hierarchy  schema-compilation  schema-compilation-details
+  packaging  action-creations  action-pattern-compilation  action-pattern-parsing  grammar  grammar-construction
+  object-tree  figure-creations  spatial-map  spatial-map-workings
