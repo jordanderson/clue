@@ -6,7 +6,6 @@ The debug list is a list of texts which varies.
 
 Part 1 - Rooms
 
-[We ]
 A room can be a suspect room. A room is usually a suspect room.
 A crimescene is a room that varies.
 
@@ -275,11 +274,15 @@ Part 5 - Looking for clues
 Understand "look for clues" or "look around" or "investigate" or "look at floor" or "examine floor" or "examine room" or "search room" or "search for clues" as looking for clues. Looking for clues is an action applying to nothing.
 
 Instead of looking for clues:
-    say "[one of]It looks like the floors are a bit dusty[or]You don't see anything of note[purely at random]."
+	say "[one of]It looks like the floors are a bit dusty[or]You don't see anything of note[purely at random]."
 
-Instead of looking for clues in the Kitchen, or looking for clues in the Study, or looking for clues in the Conservatory, or looking for clues in the Lounge: say "There is a partially-hidden staircase going down into the darkness."
+[Instead of looking for clues in the Kitchen, or looking for clues in the Study, or looking for clues in the Conservatory, or looking for clues in the Lounge:
+	say "There is a partially-hidden staircase going down into the darkness."]
 
 [ Add more details here ]
+
+Instead of looking for clues in the Kitchen:
+	say "There is a partially-hidden staircase going down into the darkness."
 
 Instead of looking for clues in the crimescene:
     say "You found blood spots on the floor!";
@@ -370,6 +373,10 @@ Part 9 - Debugging info
 Understand "debug" as asking for debug info. Asking for debug info is an action out of world.
 
 Carry out asking for debug info:
-	say "The crimescene is the [bold type][crimescene][roman type].[line break]The murderer is [bold type][murderer][roman type].[line break]The murder weapon is the [bold type][murder weapon][roman type].[line break][line break]";
+	say "The crimescene is the [bold type][crimescene][roman type].[line  break]The murderer is [bold type][murderer][roman type].[line break]The murder weapon is the [bold type][murder weapon][roman type].[line break][line break]";
 	repeat with dl running through debug list:
 		say "[dl].[line break]";
+
+Part 10 - Testing
+
+Test moving with "s / s / w / s / e / e / n / n / w".
