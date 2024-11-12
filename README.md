@@ -4,7 +4,7 @@
 
 Here is a short snippet from a playthrough of the game:
 
-> *library*
+> **library**  
 > In the library you see bookcases, a green-tinted lamp, a hard dark brown chair, A well-used table, a roaring fireplace, a threadbare armchair, a rumpled couch, a solid wood bench, and a stool.
 > 
 > The study is to your north, the hall is to your east, and the billiard room is to your south.
@@ -15,15 +15,15 @@ Here is a short snippet from a playthrough of the game:
 > 
 > Ms Peacock heads to the billiard room.
 > 
-> *l at lugwrench*
+> **l at lugwrench**  
 > A heavy wrench for removing bolts.
 > 
-> *l at candlestick*
+> **l at candlestick**  
 > It could use a little polish.
 >   
 > Miss Scarlet arrives from the Hall.
 > 
-> *l at scarlet*
+> **l at scarlet**  
 > Miss Scarlet is wearing a red cocktail dress. Her long straight hair covers the left side of her face.
 > 
 > Looking at Miss Scarlet closely, you notice blood spots on her sleeve!
