@@ -231,6 +231,7 @@ A bronze candlestick is a candlestick. The description of the bronze candlestick
 [ Knives ]
 A pocket knife is a knife. The description of the pocket knife is "A knife just like the one you had in Scouts."
 A butcher knife is a knife. The description of the butcher knife is "A formidable kitchen knife, recently sharpened."
+A hunting knife is a knife. The description of the hunting knife is "A sharp blade with a wooden handle, designed for outdoor use." Understand "knife" as the hunting knife.
 
 [ Revolvers ]
 A small pistol is a revolver. The description of the small pistol is "A purse-sized pistol." Understand "gun" or "revolver" as the small pistol.
@@ -243,9 +244,11 @@ A braided curtain tie is a rope. The description of the braided curtain tie is "
 [ Wrenches ]
 A lugwrench is a wrench. The description of the lugwrench is "A heavy wrench for removing bolts." Understand "wrench" as the lugwrench.
 A pipe wrench is a wrench. The description of the pipe wrench is "The perfect tool for fixing the plumbing."
+An adjustable wrench is a wrench. The description of the adjustable wrench is "A versatile tool with an adjustable jaw, useful for various nuts and bolts." Understand "wrench" as the adjustable wrench.
 
 [ Pipes ]
 A lead pipe is a pipe. The description of the lead pipe is "A heavy-duty pipe."
+A copper pipe is a pipe. The description of the copper pipe is "A length of copper tubing, slightly tarnished at the ends."
 
 A murder weapon is a weapon that varies.
 
