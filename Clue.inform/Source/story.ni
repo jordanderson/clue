@@ -10,7 +10,16 @@ A room can be a suspect room. A room is usually a suspect room.
 A crimescene is a room that varies.
 
 Instead of examining the crimescene:
-    say "You found blood spots on the floor!"
+    if the murder weapon is a knife:
+        say "You find blood splatter patterns consistent with a sharp blade!";
+    else if the murder weapon is a rope:
+        say "You notice strange fibers caught on furniture edges and some scratch marks around the victim's neck!";
+    else if the murder weapon is a candlestick or the murder weapon is a wrench:
+        say "You see blood on the floor with distinctive blunt-force indentation marks matching [the murder weapon]!";
+    else if the murder weapon is a revolver:
+        say "You spot a spent shell casing on the floor near where the body was found!";
+    else:
+        say "You found blood spots on the floor!";
 
 When play begins:
 	let sr be a random suspect room;
